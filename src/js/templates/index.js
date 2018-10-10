@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 // import { BrowserRouter } from 'react-router-dom';
+import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
 import '../../css/style.css';
-import Header from '../components/header';
-import Footer from '../components/footer';
+import Header from '../components/common/header';
+import Footer from '../components/common/footer';
 
 function TopSlider() {
   return (
     <section className="top">
       <figure><img src="https://placehold.jp/750x500.png" alt="トップ"/></figure>
       <div className="slide-pager">
-        <a href="#">●</a>
-        <a href="#">●</a>
-        <a href="#">●</a>
+      { [1,2,3].map(() => <a href="#">●</a>)}
       </div>
     </section>
   );
@@ -80,27 +79,32 @@ function List() {
 function News() {
   return (
     <section className="news">
-      <h2>新着情報</h2>
-      <table>
-        <tr>
-          <td className="news-date">2018.09.30</td>
-          <td><p className="label-new">NEW</p></td>
-          <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
-        </tr>
+      <h2><span className="stripe">新着情報</span></h2>
+      <ul>
+        <li className="news-item">
+          <p className="news-date">2018.10.01</p>
+          <p className="label-soldout">INFO</p>
+          <p className="news-text"><a href="#">おはようございます！</a></p>
+        </li>
+        <li className="news-item">
+          <p className="news-date">2018.09.30</p>
+          <p className="label-new">NEW</p>
+          <p className="news-text"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキスト</a></p>
+        </li>
 
-        <tr>
-          <td className="news-date">2018.09.22</td>
-          <td><p className="label-new">NEW</p></td>
-          <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
-        </tr>
+        <li className="news-item">
+          <p className="news-date">2018.09.22</p>
+          <p className="label-new">NEW</p>
+          <p className="news-text"><a href="#">おはようございます！</a></p>
+        </li>
 
-        <tr>
-          <td className="news-date">2018.09.13</td>
-          <td><p className="label-new">NEW</p></td>
-          <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
-        </tr>
+        <li className="news-item">
+          <p className="news-date">2018.09.13</p>
+          <p className="label-new">NEW</p>
+          <p className="news-text"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキスト</a></p>
+        </li>
 
-      </table>
+      </ul>
     </section>
   );
 }
@@ -108,8 +112,8 @@ function News() {
 function Info() {
   return (
     <section className="info">
-      <div>
-        <h3 className="info-title">Information</h3>
+      <div className="info-guide">
+        <h2 className="info-title stripe">Information</h2>
         <div>
           <p>テキスト</p>
           <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -120,7 +124,18 @@ function Info() {
           <li><a href="#">お問い合わせ</a></li>
       </ul>
       </div>
+      <div>
+        <Timeline />
+      </div>
     </section>
+  );
+}
+
+function Timeline() {
+  return (
+    <div className="info-timeline">
+      <hr />
+    </div>
   );
 }
 

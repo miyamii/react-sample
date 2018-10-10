@@ -1,9 +1,12 @@
 @mixin content-box {
   grid-column: 1 / 2;
+  width: 1000px;
+  margin: 0 auto;
 }
 @mixin color-label {
   width: 90px;
-  height: 20px;
+  height: 18px;
+  padding: 3px 0;
   text-align: center;
   color: #fff;
   font-size: 12px;
@@ -27,6 +30,7 @@ h1 {
 }
 h2 {
   text-align: center;
+  padding: 30px;
 }
 ul {
   list-style: none;
@@ -43,20 +47,30 @@ ul {
   margin: 0;
   padding: 0;
 }
-table {
-  border-collapse: collapse;
+.stripe{ 
+  position: relative;
+  padding: 0.3em;
 }
-tr {
-  border-bottom: 1px solid #aaa;
+.stripe:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
 }
 
-header {
+.header {
   @include content-box;
   height: 50px;
   display: grid;
   grid-template-columns: 130px 1fr 90px;
   .logo {
     grid-column: 1 / 2;
+    a:hover {
+      opacity: 0.7;
+    }
   }
   .nav {
     grid-column: 3 / 4;
@@ -67,13 +81,15 @@ header {
       align-self: center;
       a {
         color: #aaa;
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
 }
 .container {
-  margin: 0 auto;
-  max-width: 1000px;
+  // margin: 0 auto;
   background-color: aliceblue;
   display: grid;
   grid-template-rows: 50px 600px 900px 500px 500px 100px;
@@ -105,10 +121,11 @@ header {
   @include content-box;
 }
 .list-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 380px 380px 1fr;
-  justify-items: center;
+  display: flex;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-template-rows: 380px 380px 1fr;
+  flex-wrap: wrap;
+  align-content: space-between;
   li {
     max-width: 300px;
     height: 380px;
@@ -137,22 +154,43 @@ header {
 .news {
   background-color: #eee;
 }
+.news-item {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 105px 110px 1fr;
+  padding: 10px 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #aaa;
+  p {
+    font-size: 14px;
+    a:hover {
+      opacity: 0.7;
+    }
+  }
+  .news-date {
+    padding: 3px 0 0 10px;
+  }
+  .news-text {
+    font-size: 15px;
+  }
+}
 .news-date {
   font-weight: bold;
-  font-size: 14px;
 }
 .info {
+  @include content-box;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-column: 1 / 2;
 }
 
 .info-title{
-  font-size: 24px;
+  font-size: 26px;
+  text-align: left;
 }
 
-footer {
-  @include content-box;
+.footer {
+  grid-column: 1 / 2;
   background-color: lightgray;
 }
 .footer-nav{

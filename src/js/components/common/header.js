@@ -1,14 +1,14 @@
 
 import React, { Component } from 'react';
 // import logo from '../img/logo.png';
-import '../../css/style.css';
+import '../../../css/style.css';
 
 function Logo(){
   const logoUrl = new URL('https://placehold.jp/130x50.png');
   const logoAlt = 'ロゴ';
   return (
-    <div>
-      <h1><img src={logoUrl} alt={logoAlt} /></h1>
+    <div className="logo">
+      <h1><a href="#"><img src={logoUrl} alt={logoAlt} /></a></h1>
     </div>
   );
 }
@@ -25,10 +25,10 @@ function HeaderNav() {
 class Header extends React.Component {
   render() {
     return (
-      <div>
+      <header className="header">
         <Logo />
         <HeaderNav />
-      </div>
+      </header>
     );
   }
 }
