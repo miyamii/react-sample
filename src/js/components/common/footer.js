@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom'
 import '../../../css/style.css';
 
 function FooterNav() {
   return (
     <div>
       <ul className="footer-nav">
-        <li className="nav-item"><a href="#">個人情報保護方針</a></li>
-        <li className="nav-item"><a href="#">お問い合わせ</a></li>
-        <li className="nav-item"><a href="#">注意事項</a></li>
-        <li className="nav-item"><a href="#">特定商取引法表示</a></li>
+        <li className="nav-item"><Link to="/privacy">個人情報保護方針</Link></li>
+        <li className="nav-item"><Link to="/contact">お問い合わせ</Link></li>
+        <li className="nav-item"><Link to="/notice">注意事項</Link></li>
+        <li className="nav-item"><Link to="/order">特定商取引法表示</Link></li>
       </ul>
     </div>
   );

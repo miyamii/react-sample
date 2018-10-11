@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { BrowserRouter } from 'react-router-dom';
-import { Router, Route, IndexRoute, Link, IndexLink, browserHistory } from 'react-router';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 import '../../css/style.css';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
@@ -79,7 +79,7 @@ function List() {
 function News() {
   return (
     <section className="news">
-      <h2><span className="stripe">新着情報</span></h2>
+      <h2 className="news-title"><span className="stripe">新着情報</span></h2>
       <ul>
         <li className="news-item">
           <p className="news-date">2018.10.01</p>
@@ -114,13 +114,13 @@ function Info() {
     <section className="info">
       <div className="info-guide">
         <h2 className="info-title stripe">Information</h2>
-        <div>
-          <p>テキスト</p>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        </div>
         <ul>
-          <li>お支払い方法</li>
-          <li><a href="#">よくあるご質問(FAQ)</a></li>
+          <li>
+            <h3>テキスト</h3>
+            <p className="info-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </li>
+          <li className="pulldown">お支払い方法</li>
+          <li><a href="#">よくあるご質問</a></li>
           <li><a href="#">お問い合わせ</a></li>
       </ul>
       </div>
@@ -142,12 +142,14 @@ function Timeline() {
 class Index extends React.Component {
   render() {
     return (
-      <div className="container">
+      <div className="wrapper">
         <Header />
+        <div className="index-container">
         <TopSlider />
         <List />
         <News />
         <Info />
+        </div>
         <Footer />
       </div>
     );

@@ -1,5 +1,7 @@
 
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom'
 // import logo from '../img/logo.png';
 import '../../../css/style.css';
 
@@ -8,7 +10,7 @@ function Logo(){
   const logoAlt = 'ロゴ';
   return (
     <div className="logo">
-      <h1><a href="#"><img src={logoUrl} alt={logoAlt} /></a></h1>
+      <h1><Link to="/"><img src={logoUrl} alt={logoAlt} /></Link></h1>
     </div>
   );
 }
@@ -16,8 +18,8 @@ function Logo(){
 function HeaderNav() {
   return (
     <div className="nav">
-      <div className="icon"><a href="#"><i className="fas fa-cart-plus fa-2x"></i></a></div>
-      <div className="icon"><a href="#"><i className="fas fa-user fa-2x"></i></a></div>
+      <div className="icon"><Link to="/cart"><i className="fas fa-cart-plus fa-2x"></i></Link></div>
+      <div className="icon"><Link to="/mypage"><i className="fas fa-user fa-2x"></i></Link></div>
   </div>
   );
 }
