@@ -27,7 +27,7 @@ function Copyright() {
 class Footer extends React.Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className="common-footer">
         <FooterNav />
         <Copyright />
       </footer>
