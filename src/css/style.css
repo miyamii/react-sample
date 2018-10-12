@@ -233,3 +233,30 @@ ul {
     text-align: left; }
   .common-list-item .text {
     font-size: 14px; }
+
+.mypage-footer {
+  height: 100px;
+  grid-column: 1 / 2;
+  border-top: 1px solid #ddd; }
+  .mypage-footer .footer-nav {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; }
+    .mypage-footer .footer-nav .nav-item {
+      font-size: 12px;
+      padding: 0 10px;
+      margin: 20px 0; }
+      .mypage-footer .footer-nav .nav-item a {
+        color: orangered; }
+    .mypage-footer .footer-nav li + li {
+      border-left: 1px dotted #aaa; }
+  .mypage-footer .copyright {
+    text-align: center;
+    font-size: 12px;
+    margin: 0 0 20px 0; }
+
+.container {
+  grid-column: 1 / 2;
+  width: 1000px;
+  margin: 0 auto; }

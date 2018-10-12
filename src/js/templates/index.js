@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 import '../../css/style.css';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
+import ListItem from '../components/common/listitem';
+import NewsItem from '../components/common/newsitem';
 
 function TopSlider() {
   return (
@@ -20,56 +22,11 @@ function List() {
   return (
     <section className="list">
       <ul className="list-items">
-        <li>
-          <a href="#">
-            <figure><img src="https://placehold.jp/300x200.png" alt="アイテム1" /></figure>
-            <div className="item-card">
-              <p className="label label-new">NEW</p>
-              <h4>テキスト1</h4>
-              <p className="expired">テキスト1</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure><img src="https://placehold.jp/300x200.png" alt="アイテム2" /></figure>
-            <div className="item-card">
-              <p className="label label-new">NEW</p>
-              <h4>テキスト2</h4>
-              <p className="expired">テキスト2</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure><img src="https://placehold.jp/300x200.png" alt="アイテム3" /></figure>
-            <div className="item-card">
-              <p className="label label-new">NEW</p>
-              <h4>テキスト3</h4>
-              <p className="expired">テキスト3</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure><img src="https://placehold.jp/300x200.png" alt="アイテム4" /></figure>
-            <div className="item-card">
-              <p className="label label-soldout">SOLD OUT</p>
-              <h4>テキスト4</h4>
-              <p className="expired">テキスト4</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure><img src="https://placehold.jp/300x200.png" alt="アイテム5" /></figure>
-            <div className="item-card">
-              <p className="label label-soldout">SOLD OUT</p>
-              <h4>テキスト5</h4>
-              <p className="expired">テキスト5</p>
-            </div>
-          </a>
-        </li>
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
       </ul>
       <button className="link-list">一覧へ</button>
     </section>
@@ -81,29 +38,10 @@ function News() {
     <section className="news">
       <h2 className="news-title"><span className="stripe">新着情報</span></h2>
       <ul>
-        <li className="news-item">
-          <p className="news-date">2018.10.01</p>
-          <p className="label-soldout">INFO</p>
-          <p className="news-text"><a href="#">おはようございます！</a></p>
-        </li>
-        <li className="news-item">
-          <p className="news-date">2018.09.30</p>
-          <p className="label-new">NEW</p>
-          <p className="news-text"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキスト</a></p>
-        </li>
-
-        <li className="news-item">
-          <p className="news-date">2018.09.22</p>
-          <p className="label-new">NEW</p>
-          <p className="news-text"><a href="#">おはようございます！</a></p>
-        </li>
-
-        <li className="news-item">
-          <p className="news-date">2018.09.13</p>
-          <p className="label-new">NEW</p>
-          <p className="news-text"><a href="#">テキストテキストテキストテキストテキストテキストテキストテキスト</a></p>
-        </li>
-
+        <NewsItem />
+        <NewsItem />
+        <NewsItem />
+        <NewsItem />
       </ul>
     </section>
   );
