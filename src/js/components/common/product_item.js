@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 
-class ListItem extends React.Component {
+class ProductItem extends React.Component {
   render() {
     return (
       <li>
@@ -18,4 +18,4 @@ class ListItem extends React.Component {
   }
 }
 
-export default ListItem;
+export default ProductItem;

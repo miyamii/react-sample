@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 import '../../css/style.css';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
-import ListItem from '../components/common/list_item';
+import ProductItem from '../components/common/product_item';
 import NewsItem from '../components/common/news_item';
 
 function TopSlider() {
@@ -17,17 +17,17 @@ function TopSlider() {
   );
 }
 
-function List() {
+function Product() {
   return (
-    <section className="list">
-      <ul className="list-items">
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
-        <ListItem />
+    <section className="product">
+      <ul className="product-items">
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
       </ul>
-      <button className="link-list">一覧へ</button>
+      <button className="product-list">一覧へ</button>
     </section>
   );
 }
@@ -83,7 +83,7 @@ class Index extends React.Component {
         <Header />
         <div className="container">
         <TopSlider />
-        <List />
+        <Product />
         <News />
         <Info />
         </div>

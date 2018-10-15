@@ -91,28 +91,28 @@ ul {
       align-self: center;
       color: #888; }
 
-.list {
+.product {
   width: 1000px;
   margin: 0 auto;
   height: 900px; }
 
-.list-items {
+.product-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-  .list-items li {
+  .product-items li {
     max-width: 300px;
     height: 380px; }
-    .list-items li .item-card {
+    .product-items li .item-card {
       margin: -3px 0 0 0;
       height: 120px;
       box-shadow: 0 2px 2px 2px #eee;
       padding: 10px; }
-      .list-items li .item-card .label {
+      .product-items li .item-card .label {
         margin: 0 0 10px 0; }
-      .list-items li .item-card h4 {
+      .product-items li .item-card h4 {
         margin: 0; }
-      .list-items li .item-card .expired {
+      .product-items li .item-card .expired {
         background-color: #eee;
         width: 280px;
         height: 20px;
@@ -120,7 +120,7 @@ ul {
         font-size: 14px;
         padding: 2px 0;
         margin-top: 40px; }
-  .list-items::after {
+  .product-items::after {
     content: "";
     display: block;
     width: 30%; }
@@ -350,6 +350,3 @@ ul {
   padding: 10px 0 0 50px;
   background-image: url("https://placehold.jp/40x40.png?text=A");
   font-size: 0.8rem; }
-
-.faq-item span {
-  padding: 10px 0 0 0; }

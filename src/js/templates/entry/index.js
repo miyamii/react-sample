@@ -9,7 +9,9 @@ class Entry extends React.Component {
       <div className="wrapper">
         <Header />
         <div className="container">
-          <SectionTitle title="会員登録" />
+          <div className="mypage-list">
+            <SectionTitle title="会員登録" />
+          </div>
         </div>
         <Footer />
       </div>

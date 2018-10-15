@@ -128,11 +128,11 @@ ul {
     }
   }
 }
-.list {
+.product {
   @include content-box;
   height: 900px;
 }
-.list-items {
+.product-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

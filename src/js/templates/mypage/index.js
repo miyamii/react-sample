@@ -9,7 +9,9 @@ class Mypage extends React.Component {
       <div className="wrapper">
         <Header />
         <div className="container">
-          <SectionTitle title="MYページ" />
+          <div className="mypage-list">
+            <SectionTitle title="マイページ" />
+          </div>
         </div>
         <Footer />
       </div>
