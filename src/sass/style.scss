@@ -19,6 +19,12 @@ $red: red;
   font-size: 14px;
 }
 
+@mixin faq-bgimg {
+  background-repeat: no-repeat;
+  height: 40px;
+  padding: 10px 0 0 50px;
+}
+
 body {
   color: #333;
 }
@@ -412,8 +418,16 @@ ul {
 
 // Faq
 .faq-item {
-  h3 img {
-    margin: 0 10px;
-    padding: 20px 0;
+  h3{
+    @include faq-bgimg;
+    background-image: url("https://placehold.jp/40x40.png?text=Q");
+    color: #888;
+  }
+  p {
+    @include faq-bgimg;
+    background-image: url("https://placehold.jp/40x40.png?text=A");
+    font-size: 0.8rem;
   }
 }
+
+// Login

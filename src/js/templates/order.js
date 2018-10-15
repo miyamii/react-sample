@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/mypage/header';
 import Footer from '../components/mypage/footer';
-import SectionTitle from '../components/mypage/sectiontitle';
+import SectionTitle from '../components/mypage/section_title';
 
 class Order extends React.Component {
   render() {

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Header from '../components/mypage/header';
-import Footer from '../components/mypage/footer';
+import Header from '../../components/mypage/header';
+import Footer from '../../components/mypage/footer';
 import { Form, Input, Select, Button } from 'element-react';
+import SectionTitle from '../../components/mypage/section_title';
 
 function ContactForm() {
   return (
@@ -99,7 +100,10 @@ class Contact extends React.Component {
       <div className="wrapper">
         <Header />
         <div className="container">
-        <ContactForm />
+          <div className="mypage-list">
+            <SectionTitle title="お問い合わせ" />
+            <ContactForm />
+          </div>
         </div>
         <Footer />
       </div>

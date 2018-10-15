@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
-import Title from './sectiontitle';
+import Title from './section_title';
 
 class CartItem extends React.Component {
   render() {

@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 import '../../css/style.css';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
-import ListItem from '../components/common/listitem';
-import NewsItem from '../components/common/newsitem';
+import ListItem from '../components/common/list_item';
+import NewsItem from '../components/common/news_item';
 
 function TopSlider() {
   return (

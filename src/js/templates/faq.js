@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
 import Title from '../components/common/title';
-import SectionTitle from '../components/common/sectiontitle';
-import FaqItem from '../components/common/faqitem';
+import SectionTitle from '../components/common/section_title';
+import FaqItem from '../components/common/faq_item';
 
 class Faq extends React.Component {
   render() {
