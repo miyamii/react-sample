@@ -1,4 +1,6 @@
 // 共通
+$red: red;
+
 @mixin content-box {
   grid-column: 1 / 2;
   width: 1000px;
@@ -98,13 +100,12 @@ ul {
     }
   }
 }
-.index-container {
+.container {
   display: grid;
-  grid-template-rows: 600px 900px 500px 500px;
 }
-
 .top {
   @include content-box;
+  height: 600px;
   figure {
     width: 750px;
     margin: 0 auto;
@@ -124,6 +125,7 @@ ul {
 }
 .list {
   @include content-box;
+  height: 900px;
 }
 .list-items {
   display: flex;
@@ -162,6 +164,7 @@ ul {
 }
 .news {
   background-color: #eee;
+  height: 500px;
   .news-title {
     padding: 30px 0;
   }
@@ -191,6 +194,7 @@ ul {
 }
 .info {
   @include content-box;
+  height: 500px;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-column: 1 / 2;
@@ -251,6 +255,7 @@ ul {
 
 // ナビメニュー
 .common-list {
+  @include content-box;
   &::after {
     content:"";
     display: block;
@@ -311,6 +316,21 @@ ul {
     }
   }
 }
+.mypage-list-item {
+  // @mixin content-box;
+  max-width: 1000px;
+  margin: 50px auto 0 auto;
+  .mypage-h2 {
+    padding: 5px 10px;
+    border-left: 5px solid orange;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 1.25rem;
+  }
+  // .text {
+  //   font-size: 14px;
+  // }
+}
 .mypage-footer {
   height: 100px;
   grid-column: 1 / 2;
@@ -334,11 +354,55 @@ ul {
   }
   .copyright {
     text-align: center;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin: 0 0 20px 0;
   }
 }
 
-.container {
+// Contact
+.contact-form {
   @include content-box;
+  .text {
+    font-size: 0.75rem;
+  }
+  table {
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    width: 1000px;
+    td{
+      padding: 5px 0 5px 5px;
+      font-size: 0.75rem;
+      &:first-child {
+        width: 180px;
+        background-color: #ddd;
+        .required {
+          color: $red;
+          font-size: 12px;
+        }
+      }
+      .input-short {
+        width: 80px;
+      }
+      .input-middle {
+        width: 160px;
+      }
+      .input-long {
+        width: 400px;
+      }
+      .select {
+        width: 200px;
+      }
+    }
+  }
 }
+.attention {
+  color: $red;
+  font-size: 0.7rem;
+}
+.button-middle {
+  width: 120px;
+  padding: 0;
+}
+// .button-wrapper {
+//   margin: 0 auto;
+// }

@@ -71,14 +71,14 @@ ul {
         .header .nav .icon a:hover {
           opacity: 0.7; }
 
-.index-container {
-  display: grid;
-  grid-template-rows: 600px 900px 500px 500px; }
+.container {
+  display: grid; }
 
 .top {
   grid-column: 1 / 2;
   width: 1000px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 600px; }
   .top figure {
     width: 750px;
     margin: 0 auto; }
@@ -96,7 +96,8 @@ ul {
 .list {
   grid-column: 1 / 2;
   width: 1000px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 900px; }
 
 .list-items {
   display: flex;
@@ -128,7 +129,8 @@ ul {
     width: 30%; }
 
 .news {
-  background-color: #eee; }
+  background-color: #eee;
+  height: 500px; }
   .news .news-title {
     padding: 30px 0; }
 
@@ -155,6 +157,7 @@ ul {
   grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto;
+  height: 500px;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-column: 1 / 2; }
@@ -211,11 +214,15 @@ ul {
   font-size: 12px;
   background-color: #555; }
 
-.common-list::after {
-  content: "";
-  display: block;
-  max-width: 1000px;
-  height: 150px; }
+.common-list {
+  grid-column: 1 / 2;
+  width: 1000px;
+  margin: 0 auto; }
+  .common-list::after {
+    content: "";
+    display: block;
+    max-width: 1000px;
+    height: 150px; }
 
 .common-title {
   padding: 50px 0;
@@ -233,6 +240,40 @@ ul {
     text-align: left; }
   .common-list-item .text {
     font-size: 14px; }
+
+.mypage-header {
+  grid-column: 1 / 2;
+  width: 1000px;
+  margin: 0 auto;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 130px 1fr 90px; }
+  .mypage-header .logo {
+    grid-column: 1 / 2; }
+    .mypage-header .logo a:hover {
+      opacity: 0.7; }
+  .mypage-header .nav {
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end; }
+    .mypage-header .nav .icon {
+      width: 45px;
+      margin: -10px 0 0 0;
+      align-self: center; }
+      .mypage-header .nav .icon a {
+        color: #aaa; }
+        .mypage-header .nav .icon a:hover {
+          opacity: 0.7; }
+
+.mypage-list-item {
+  max-width: 1000px;
+  margin: 50px auto 0 auto; }
+  .mypage-list-item .mypage-h2 {
+    padding: 5px 10px;
+    border-left: 5px solid orange;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 1.25rem; }
 
 .mypage-footer {
   height: 100px;
@@ -253,10 +294,41 @@ ul {
       border-left: 1px dotted #aaa; }
   .mypage-footer .copyright {
     text-align: center;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin: 0 0 20px 0; }
 
-.container {
+.contact-form {
   grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto; }
+  .contact-form .text {
+    font-size: 0.75rem; }
+  .contact-form table {
+    border-collapse: collapse;
+    border: 1px solid #aaa;
+    width: 1000px; }
+    .contact-form table td {
+      padding: 5px 0 5px 5px;
+      font-size: 0.75rem; }
+      .contact-form table td:first-child {
+        width: 180px;
+        background-color: #ddd; }
+        .contact-form table td:first-child .required {
+          color: red;
+          font-size: 12px; }
+      .contact-form table td .input-short {
+        width: 80px; }
+      .contact-form table td .input-middle {
+        width: 160px; }
+      .contact-form table td .input-long {
+        width: 400px; }
+      .contact-form table td .select {
+        width: 200px; }
+
+.attention {
+  color: red;
+  font-size: 0.7rem; }
+
+.button-middle {
+  width: 120px;
+  padding: 0; }

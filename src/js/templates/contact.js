@@ -1,79 +1,96 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import '../../css/style.css';
 import Header from '../components/mypage/header';
 import Footer from '../components/mypage/footer';
+import { Form, Input, Select, Button } from 'element-react';
 
 function ContactForm() {
   return (
-    <form action="#" method="post">
-      <p>テキストが入ります。</p>
+    <Form className="contact-form" action="#" method="post">
+      <p className="text">テキストが入ります。</p>
       <table>
         <tr>
           <td>お名前<span className="required">※</span></td>
           <td>
-            姓<input type="text" name="family-name"/>
-            名<input type="text" name="given-name"/>
+            姓&nbsp;<Input className="input-middle" minLength="1" size="mini" name="family-name"/>
+            &nbsp;&nbsp;名&nbsp;<Input className="input-middle" minLength="1" size="mini" name="given-name"/>
           </td>
         </tr>
         <tr>
           <td>お名前(フリガナ)<span className="required">※</span></td>
           <td>
-            セイ<input type="text" name="family-name-kana"/>
-            メイ<input type="text" name="given-name-kana"/>
+            セイ&nbsp;<Input className="input-middle" size="mini" name="family-name-kana"/>
+            &nbsp;&nbsp;メイ&nbsp;<Input className="input-middle" size="mini" name="given-name-kana"/>
           </td>
         </tr>
         <tr>
           <td>郵便番号</td>
           <td>
-            〒 <input type="text" name="postal-code1"/>
-            - <input type="text" name="postal-code2"/>
+            〒&nbsp;<Input className="input-short" size="mini" name="postal-code1"/>
+            &nbsp;-&nbsp;<Input className="input-short" size="mini" name="postal-code2"/><br />
+            <Button className="button-middle">自動住所入力</Button><br />
+            <p className="attention">赤字テキスト</p>
           </td>
         </tr>
         <tr>
           <td>住所</td>
           <td>
-            <input type="text" name="city-name"/><br />
+            <Select className="select" name="address1" placeholder="種別を選択してください。" size="mini">
+              <Select.Option value="北海道">北海道</Select.Option>
+              <Select.Option value="東京都">東京都</Select.Option>
+              <Select.Option value="福岡県">福岡県</Select.Option>
+            </Select><br />
+            <Input className="input-long" size="mini" name="address2"/><br />
             市区町村名 (例：〇〇市〇〇町)<br />
-            メイ<input type="text" name="first-name"/><br />
+            <Input className="input-long" size="mini" name="address3"/><br />
             番地・ビル名 (例：1-2-3)<br />
-            <span>赤字テキスト</span>
+            <p className="attention">赤字テキスト</p>
           </td>
         </tr>
         <tr>
           <td>電話番号</td>
           <td>
-            <input type="number" name="tel-1"/>
-            -<input type="number" name="tel-2"/>
-            -<input type="number" name="tel-3"/>
+            <Input className="input-short" size="mini" name="tel1"/>
+            &nbsp;-&nbsp;<Input className="input-short" size="mini" name="tel2"/>
+            &nbsp;-&nbsp;<Input className="input-short" size="mini" name="tel3"/>
           </td>
         </tr>
         <tr>
           <td>メールアドレス<span className="required">※</span></td>
           <td>
-            <input type="mail" name="mail1"/><br />
-            <input type="mail" name="mail2"/><br />
-            <span>赤字テキスト</span>
+            <Input className="input-long" size="mini" type="mail" name="mail1"/><br />
+            <Input className="input-long" size="mini" type="mail" name="mail2"/><br />
+            <p  className="attention">赤字テキスト</p>
           </td>
         </tr>
         <tr>
           <td>お問い合わせ種別<span className="required">※</span></td>
           <td>
-            <select name="tel-1">
-            <option value="その1">その1</option>
-            <option value="その2">その2</option>
-            <option value="その3">その3</option>
-            </select>
+            <Select className="select" name="kind" placeholder="種別を選択してください。" size="mini">
+              <Select.Option value="その1">その1</Select.Option>
+              <Select.Option value="その2">その2</Select.Option>
+              <Select.Option value="その3">その3</Select.Option>
+            </Select>
           </td>
         </tr>
         <tr>
           <td>ご注文番号</td>
           <td>
-            <input type="number" name="order-number"/>
+            <Input type="number" size="mini" name="order-number"/>
+          </td>
+        </tr>
+        <tr>
+          <td>お問い合わせ内容<span className="required">※</span></td>
+          <td>
+            <Input type="textarea" name="summary"/>
+            <p className="attention">赤字テキスト</p>
           </td>
         </tr>
       </table>
-    </form>
+      <div className="button-wrapper">
+        <Button className="button-middle" type="primary" size="mini" nativeType="submit">確認ページへ</Button>
+      </div>
+    </Form>
   );
 }
 

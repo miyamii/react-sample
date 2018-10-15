@@ -38,10 +38,10 @@ function News() {
     <section className="news">
       <h2 className="news-title"><span className="stripe">新着情報</span></h2>
       <ul>
-        <NewsItem />
-        <NewsItem />
-        <NewsItem />
-        <NewsItem />
+        <NewsItem date="2018.10.01" className="label-new" labelText="NEW" url="/privacy" newsText="Hello World" />
+        <NewsItem date="2018.9.01" className="label-new" labelText="NEW" url="/" newsText="Hello World" />
+        <NewsItem date="2018.8.01" className="label-soldout" labelText="INFO" url="/contact" newsText="こんにちは" />
+        <NewsItem date="2018.7.01" className="label-new" labelText="NEW" url="/" newsText="Hello World" />
       </ul>
     </section>
   );
@@ -58,8 +58,8 @@ function Info() {
             <p className="info-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
           </li>
           <li className="pulldown">お支払い方法</li>
-          <li><a href="#">よくあるご質問</a></li>
-          <li><a href="#">お問い合わせ</a></li>
+          <li><Link to="/faq">よくあるご質問</Link></li>
+          <li><Link to="/contact">お問い合わせ</Link></li>
       </ul>
       </div>
       <div>
@@ -82,7 +82,7 @@ class Index extends React.Component {
     return (
       <div className="wrapper">
         <Header />
-        <div className="index-container">
+        <div className="container">
         <TopSlider />
         <List />
         <News />

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import SectionTitle from './sectiontitle';
 
 class Section extends React.Component {
   render() {
     return (
       <li className="common-list-item">
-        <h2 className="common-h2">タイトル</h2>
-        <p className="text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <SectionTitle title={this.props.title} />
+        <p className="text">{this.props.text}</p>
       </li>
     );
   }

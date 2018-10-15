@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import '../../../css/style.css';
 
 function Logo(){
-  const logoUrl = new URL('https://placehold.jp/130x50.png');
+  const logoUrl = new URL('https://placehold.jp/130x50.png?text=logo');
   const logoAlt = 'ロゴ';
   return (
     <div className="logo">
