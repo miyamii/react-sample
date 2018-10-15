@@ -48,7 +48,6 @@ ul {
   background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px); }
 
 .header {
-  grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto;
   height: 50px;
@@ -75,7 +74,6 @@ ul {
   display: grid; }
 
 .top {
-  grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto;
   height: 600px; }
@@ -94,7 +92,6 @@ ul {
       color: #888; }
 
 .list {
-  grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto;
   height: 900px; }
@@ -154,7 +151,6 @@ ul {
   font-weight: bold; }
 
 .info {
-  grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto;
   height: 500px;
@@ -215,7 +211,6 @@ ul {
   background-color: #555; }
 
 .common-list {
-  grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto; }
   .common-list::after {
@@ -242,7 +237,6 @@ ul {
     font-size: 14px; }
 
 .mypage-header {
-  grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto;
   height: 50px;
@@ -265,15 +259,37 @@ ul {
         .mypage-header .nav .icon a:hover {
           opacity: 0.7; }
 
+.mypage-table {
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  width: 1000px;
+  margin: 0 auto; }
+  .mypage-table td {
+    padding: 5px 10px;
+    font-size: 0.75rem; }
+    .mypage-table td:first-child {
+      width: 180px;
+      background-color: #ddd; }
+
+.mypage-h2 {
+  padding: 5px 10px;
+  border-left: 5px solid orange;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 1.25rem; }
+
+.mypage-list {
+  width: 1000px;
+  margin: 0 auto; }
+  .mypage-list::after {
+    content: "";
+    display: block;
+    max-width: 1000px;
+    height: 150px; }
+
 .mypage-list-item {
   max-width: 1000px;
   margin: 50px auto 0 auto; }
-  .mypage-list-item .mypage-h2 {
-    padding: 5px 10px;
-    border-left: 5px solid orange;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    font-size: 1.25rem; }
 
 .mypage-footer {
   height: 100px;
@@ -297,33 +313,21 @@ ul {
     font-size: 0.75rem;
     margin: 0 0 20px 0; }
 
-.contact-form {
-  grid-column: 1 / 2;
-  width: 1000px;
-  margin: 0 auto; }
-  .contact-form .text {
-    font-size: 0.75rem; }
-  .contact-form table {
-    border-collapse: collapse;
-    border: 1px solid #aaa;
-    width: 1000px; }
-    .contact-form table td {
-      padding: 5px 0 5px 5px;
-      font-size: 0.75rem; }
-      .contact-form table td:first-child {
-        width: 180px;
-        background-color: #ddd; }
-        .contact-form table td:first-child .required {
-          color: red;
-          font-size: 12px; }
-      .contact-form table td .input-short {
-        width: 80px; }
-      .contact-form table td .input-middle {
-        width: 160px; }
-      .contact-form table td .input-long {
-        width: 400px; }
-      .contact-form table td .select {
-        width: 200px; }
+.required {
+  color: red;
+  font-size: 12px; }
+
+.input-short {
+  width: 80px; }
+
+.input-middle {
+  width: 160px; }
+
+.input-long {
+  width: 400px; }
+
+.select {
+  width: 200px; }
 
 .attention {
   color: red;
@@ -332,3 +336,7 @@ ul {
 .button-middle {
   width: 120px;
   padding: 0; }
+
+.faq-item h3 img {
+  margin: 0 10px;
+  padding: 20px 0; }

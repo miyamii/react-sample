@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
-import '../../../css/style.css';
 
 class ListItem extends React.Component {
   render() {

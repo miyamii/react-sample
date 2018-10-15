@@ -1,8 +1,6 @@
-
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 // import logo from '../img/logo.png';
-import '../../../css/style.css';
 
 function Logo(){
   const logoUrl = new URL('https://placehold.jp/130x50.png?text=logo');

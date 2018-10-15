@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../css/style.css';
 
 class MypageSectionTitle extends React.Component {
   render() {

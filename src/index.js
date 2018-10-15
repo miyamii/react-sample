@@ -8,6 +8,7 @@ import Cart from './js/templates/cart';
 import Privacy from './js/templates/privacy';
 import Notice from './js/templates/notice';
 import Contact from './js/templates/contact';
+import Order from './js/templates/order';
 import Faq from './js/templates/faq';
 import * as serviceWorker from './serviceWorker';
 
@@ -19,6 +20,7 @@ ReactDOM.render(
     <Route path='/privacy' component={Privacy} />
     <Route path='/notice' component={Notice} />
     <Route path='/contact' component={Contact} />
+    <Route path='/order' component={Order} />
     <Route path='/faq' component={Faq} />
   </Switch>
     {/* <Route path='/cart' component={Cart} />

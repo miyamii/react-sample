@@ -2,7 +2,6 @@
 $red: red;
 
 @mixin content-box {
-  grid-column: 1 / 2;
   width: 1000px;
   margin: 0 auto;
 }
@@ -316,17 +315,40 @@ ul {
     }
   }
 }
+.mypage-table {
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  width: 1000px;
+  margin: 0 auto;
+  td{
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    &:first-child {
+      width: 180px;
+      background-color: #ddd;
+    }
+  }
+}
+.mypage-h2 {
+  padding: 5px 10px;
+  border-left: 5px solid orange;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 1.25rem;
+}
+.mypage-list {
+  @include content-box;
+  &::after {
+    content:"";
+    display: block;
+    max-width: 1000px;
+    height: 150px;
+   }
+}
 .mypage-list-item {
-  // @mixin content-box;
+  // @include content-box;
   max-width: 1000px;
   margin: 50px auto 0 auto;
-  .mypage-h2 {
-    padding: 5px 10px;
-    border-left: 5px solid orange;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    font-size: 1.25rem;
-  }
   // .text {
   //   font-size: 14px;
   // }
@@ -360,40 +382,21 @@ ul {
 }
 
 // Contact
-.contact-form {
-  @include content-box;
-  .text {
-    font-size: 0.75rem;
-  }
-  table {
-    border-collapse: collapse;
-    border: 1px solid #aaa;
-    width: 1000px;
-    td{
-      padding: 5px 0 5px 5px;
-      font-size: 0.75rem;
-      &:first-child {
-        width: 180px;
-        background-color: #ddd;
-        .required {
-          color: $red;
-          font-size: 12px;
-        }
-      }
-      .input-short {
-        width: 80px;
-      }
-      .input-middle {
-        width: 160px;
-      }
-      .input-long {
-        width: 400px;
-      }
-      .select {
-        width: 200px;
-      }
-    }
-  }
+.required {
+  color: $red;
+  font-size: 12px;
+}
+.input-short {
+  width: 80px;
+}
+.input-middle {
+  width: 160px;
+}
+.input-long {
+  width: 400px;
+}
+.select {
+  width: 200px;
 }
 .attention {
   color: $red;
@@ -406,3 +409,11 @@ ul {
 // .button-wrapper {
 //   margin: 0 auto;
 // }
+
+// Faq
+.faq-item {
+  h3 img {
+    margin: 0 10px;
+    padding: 20px 0;
+  }
+}

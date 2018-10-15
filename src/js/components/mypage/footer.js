@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import '../../../css/style.css';
 
 function FooterNav() {
   return (

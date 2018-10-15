@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../css/style.css';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
 import Title from '../components/common/title';
@@ -16,31 +15,30 @@ class Faq extends React.Component {
           <ul className="common-list">
             <li className="common-list-item">
               <SectionTitle title="分類1"/>
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
+              <FaqItem question="質問文です" answer="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"/>
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
             </li>
             <li className="common-list-item">
               <SectionTitle title="分類2"/>
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
             </li>
             <li className="common-list-item">
               <SectionTitle title="分類3" />
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
             </li>
             <li className="common-list-item">
               <SectionTitle title="分類4" />
-              <FaqItem />
-              <FaqItem />
-              <FaqItem />
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer="回答"/>
             </li>
           </ul>
         </div>

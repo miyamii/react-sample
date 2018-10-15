@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../css/style.css';
 import Header from '../components/mypage/header';
 import Footer from '../components/mypage/footer';
 import { Form, Input, Select, Button } from 'element-react';
@@ -8,7 +7,7 @@ function ContactForm() {
   return (
     <Form className="contact-form" action="#" method="post">
       <p className="text">テキストが入ります。</p>
-      <table>
+      <table className="mypage-table" rules="all">
         <tr>
           <td>お名前<span className="required">※</span></td>
           <td>

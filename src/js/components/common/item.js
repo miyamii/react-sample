@@ -1,3 +1,6 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+
 function Item() {
   return (
     <a href="#">
