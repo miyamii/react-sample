@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { BrowserRouter, Route, Link } from 'react-router-dom'
 import Header from '../components/mypage/header';
 import Footer from '../components/mypage/footer';
-import CartItem from '../components/mypage/cartitem';
+import CartItem from '../components/mypage/cart_item';
 
 class Cart extends React.Component {
   render() {

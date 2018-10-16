@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
+import PageTop from '../components/common/pagetop';
 import Title from '../components/common/title';
 import SectionTitle from '../components/common/section_title';
 import FaqItem from '../components/common/faq_item';

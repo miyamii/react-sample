@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { BrowserRouter, Route, Link } from 'react-router-dom'
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
+import PageTop from '../components/common/pagetop';
 import Title from '../components/common/title';
 import Section from '../components/common/section';
 

@@ -15,8 +15,8 @@ function Logo(){
 function HeaderNav() {
   return (
     <div className="nav">
-      <div className="icon"><Link to="/cart"><i className="fas fa-cart-plus fa-2x"></i></Link></div>
-      <div className="icon"><Link to="/mypage"><i className="fas fa-user fa-2x"></i></Link></div>
+      <div className="icon"><Link to="/cart"><i className="fas fa-cart-plus fa-2x fa-fw"></i></Link></div>
+      <div className="icon"><Link to="/mypage"><i className="fas fa-user fa-2x fa-fw"></i></Link></div>
   </div>
   );
 }
@@ -24,7 +24,7 @@ function HeaderNav() {
 class Header extends React.Component {
   render() {
     return (
-      <header className="header">
+      <header className="common-header">
         <Logo />
         <HeaderNav />
       </header>

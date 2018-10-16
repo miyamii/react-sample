@@ -1,44 +1,18 @@
-// 共通
+// 全共通
 $red: red;
-
-@mixin content-box {
-  width: 1000px;
-  margin: 0 auto;
-}
-@mixin color-label {
-  width: 90px;
-  height: 18px;
-  padding: 3px 0;
-  text-align: center;
-  color: #fff;
-  font-size: 12px;
-}
-@mixin large-button {
-  width: 1000px;
-  height: 50px;
-  font-size: 14px;
-}
-
-@mixin faq-bgimg {
-  background-repeat: no-repeat;
-  height: 40px;
-  padding: 10px 0 0 50px;
-}
+$orange: orange;
+$green: #90EE90;
+$blue: skyblue;
+$white: #fff;
+$lightgray: #eee;
+$gray: #aaa;
+$darkgray: #555;
+$black: #333;
 
 body {
-  color: #333;
+  color: $black;
 }
 
-button {
-  @include large-button;
-  border: 1px solid #888;
-  background-color: #eee;
-  &:hover {
-    background-color: rgb(135, 235, 180);
-    border: 1px solid rgb(135, 235, 180);
-    color: #fff;
-  }
-}
 h1 {
   padding: 0;
   margin: 0;
@@ -52,7 +26,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: $black;
 }
 figure {
   margin: 0;
@@ -62,6 +36,50 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+table {
+
+}
+
+.container {
+  display: grid;
+}
+
+@mixin content-box($height: auto) {
+  width: 1000px;
+  height: $height;
+  margin: 0 auto;
+}
+@mixin label-base($color) {
+  width: 90px;
+  height: 18px;
+  padding: 3px 0;
+  text-align: center;
+  color: $white;
+  font-size: 12px;
+  background-color: $color;
+}
+@mixin button-color($bgColor, $borderColor, $fontColor) {
+  background-color: $bgColor;
+  border: 1px solid $borderColor;
+  color: $fontColor;
+}
+@mixin button-base($bgColor, $borderColor, $fontColor) {
+  @include button-color($bgColor, $borderColor, $fontColor);
+  height: 30px;
+  font-weight: bold;
+  border-radius: 8px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+@mixin large-button-base($bgColor, $borderColor, $fontColor) {
+  @include button-color($bgColor, $borderColor, $fontColor);
+  width: 1000px;
+  height: 50px;
+  font-size: 1rem;
+}
+
 .stripe{
   position: relative;
   padding: 0.3em;
@@ -76,10 +94,9 @@ ul {
   background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
 }
 
-// Top
-.header {
-  @include content-box;
-  height: 50px;
+// Common共通
+.common-header {
+  @include content-box(50px);
   display: grid;
   grid-template-columns: 130px 1fr 90px;
   .logo {
@@ -97,7 +114,7 @@ ul {
       margin: -10px 0 0 0;
       align-self: center;
       a {
-        color: #aaa;
+        color: $gray;
         &:hover {
           opacity: 0.7;
         }
@@ -105,12 +122,35 @@ ul {
     }
   }
 }
-.container {
-  display: grid;
+
+.common-footer {
+  height: 100px;
+  grid-column: 1 / 2;
+  background-color: $lightgray;
+  .footer-nav {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    .nav-item {
+      font-size: 12px;
+      padding: 0 10px;
+      margin: 20px 0;
+    }
+    li+ li {
+      border-left: 1px solid $gray;
+    }
+  }
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+    margin: 0 0 20px 0;
+  }
 }
+
+// Top
 .top {
-  @include content-box;
-  height: 600px;
+  @include content-box(600px);
   figure {
     width: 750px;
     margin: 0 auto;
@@ -124,13 +164,12 @@ ul {
     justify-content: space-around;
     a {
       align-self: center;
-      color: #888;
+      color: $gray;
     }
   }
 }
 .product {
-  @include content-box;
-  height: 900px;
+  @include content-box(900px);
 }
 .product-items {
   display: flex;
@@ -139,19 +178,19 @@ ul {
   li {
     max-width: 300px;
     height: 380px;
-    .item-card {
+    .product-card {
       margin: -3px 0 0 0;
       height: 120px;
       box-shadow: 0 2px 2px 2px #eee;
       padding: 10px;
-      .label {
+      .product-label {
         margin: 0 0 10px 0;
       }
       h4 {
         margin: 0;
       }
-      .expired {
-        background-color: #eee;
+      .product-expired {
+        background-color: $lightgray;
         width: 280px;
         height: 20px;
         text-align: center;
@@ -167,39 +206,45 @@ ul {
     width:30%;
   }
 }
+.product-list-button {
+  @include large-button-base($lightgray, $gray, $black);
+  &:hover {
+    @include button-color($green, $green, $white)
+  }
+}
 .news {
-  background-color: #eee;
+  background-color: $lightgray;
   height: 500px;
   .news-title {
     padding: 30px 0;
   }
-}
-.news-item {
-  width: 1000px;
-  display: grid;
-  grid-template-columns: 105px 110px 1fr;
-  padding: 10px 0;
-  margin: 0 auto;
-  border-bottom: 1px solid #aaa;
-  p {
-    font-size: 14px;
-    a:hover {
-      opacity: 0.7;
+  .news-item {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 105px 110px 1fr;
+    padding: 10px 0;
+    margin: 0 auto;
+    border-bottom: 1px solid $gray;
+    p {
+      font-size: 14px;
+      a:hover {
+        opacity: 0.7;
+      }
+    }
+    .news-date {
+      padding: 3px 0 0 10px;
+    }
+    .news-text {
+      font-size: 15px;
     }
   }
-  .news-date {
-    padding: 3px 0 0 10px;
-  }
-  .news-text {
-    font-size: 15px;
-  }
 }
+
 .news-date {
   font-weight: bold;
 }
 .info {
-  @include content-box;
-  height: 500px;
+  @include content-box(500px);
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-column: 1 / 2;
@@ -211,7 +256,7 @@ ul {
     }
     li {
       padding: 10px 0;
-      border-bottom: 1px dotted #888;
+      border-bottom: 1px dotted $gray;
        font-weight: bold;
     }
     .info-text {
@@ -224,38 +269,11 @@ ul {
   }
 }
 
-.common-footer {
-  height: 100px;
-  grid-column: 1 / 2;
-  background-color: lightgray;
-  .footer-nav {
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    .nav-item {
-      font-size: 12px;
-      padding: 0 10px;
-      margin: 20px 0;
-    }
-    li+ li {
-      border-left: 1px solid #aaa;
-    }
-  }
-  .copyright {
-    text-align: center;
-    font-size: 12px;
-    margin: 0 0 20px 0;
-  }
-}
-
 .label-new {
-  @include color-label;
-  background-color: orange;
+  @include label-base($orange);
 }
-.label-soldout {
-  @include color-label;
-  background-color: #555;
+.label-soldout, .label-info {
+  @include label-base($darkgray);
 }
 
 // ナビメニュー
@@ -271,7 +289,7 @@ ul {
 
 .common-title {
   padding: 50px 0;
-  background-color: #eee;
+  background-color: $lightgray;
   .common-h1 {
     text-align: center;
     font-size: 24px;
@@ -294,12 +312,20 @@ ul {
 
 // Mypage
 .mypage-header {
-  @include content-box;
-  height: 50px;
-  display: grid;
-  grid-template-columns: 130px 1fr 90px;
+  @include content-box(70px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  // grid-template-columns: 150px 1fr 300px;
+  justify-content: space-between;
+  background-color: $white;
+  border-bottom: 3px solid $orange;
+  z-index: 1;
   .logo {
-    grid-column: 1 / 2;
+    justify-content: flex-end;
+    align-items: flex-start;
     a:hover {
       opacity: 0.7;
     }
@@ -308,22 +334,30 @@ ul {
     grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
-    .icon {
-      width: 45px;
-      margin: -10px 0 0 0;
-      align-self: center;
-      a {
-        color: #aaa;
-        &:hover {
-          opacity: 0.7;
-        }
+    align-items: flex-end;
+    .login-area {
+      height: 32px;
+    }
+    .button-area {
+      height: 38px;
+      display: flex;
+      .mypage-button{
+        @include button-base($lightgray, $lightgray, $orange);
+        margin: 0 10px 0 0;
+      }
+      .entry-button {
+        @include button-base($orange, $orange, $white);
+        margin: 0 10px 0 0;
+      }
+      .cart-button {
+        @include button-base($orange, $orange, $white);
       }
     }
   }
 }
 .mypage-table {
   border-collapse: collapse;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   width: 1000px;
   margin: 0 auto;
   td{
@@ -331,38 +365,47 @@ ul {
     font-size: 0.75rem;
     &:first-child {
       width: 180px;
-      background-color: #ddd;
+      background-color: $lightgray;
     }
   }
 }
+
+.confirm-button {
+  @include button-base($blue, $blue, $white);
+  margin: 30px 0;
+}
+
 .mypage-h2 {
   padding: 5px 10px;
-  border-left: 5px solid orange;
-  border-bottom: 1px solid #ddd;
+  border-left: 5px solid $orange;
+  border-bottom: 1px solid $lightgray;
   text-align: left;
   font-size: 1.25rem;
 }
+.mypage-h3 {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $orange;
+}
+// @mixin にするかも
+.mypage-text {
+  font-size: 0.8rem;
+}
+
 .mypage-list {
   @include content-box;
-  &::after {
-    content:"";
-    display: block;
-    max-width: 1000px;
-    height: 150px;
-   }
+  margin-top: 80px;
 }
 .mypage-list-item {
-  // @include content-box;
-  max-width: 1000px;
-  margin: 50px auto 0 auto;
   // .text {
-  //   font-size: 14px;
+  //   font-size: 0.8rem;
   // }
 }
 .mypage-footer {
   height: 100px;
   grid-column: 1 / 2;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
   .footer-nav {
     width: 1000px;
     margin: 0 auto;
@@ -377,7 +420,7 @@ ul {
       }
     }
     li+ li {
-      border-left: 1px dotted #aaa;
+      border-left: 1px dotted $gray;
     }
   }
   .copyright {
@@ -408,26 +451,43 @@ ul {
   color: $red;
   font-size: 0.7rem;
 }
-.button-middle {
-  width: 120px;
-  padding: 0;
-}
 // .button-wrapper {
 //   margin: 0 auto;
 // }
 
 // Faq
+@mixin faq-bgimg($url) {
+  background-image: $url;
+  background-repeat: no-repeat;
+  height: 40px;
+  padding: 10px 0 0 50px;
+}
+
 .faq-item {
   h3{
-    @include faq-bgimg;
-    background-image: url("https://placehold.jp/40x40.png?text=Q");
-    color: #888;
+    @include faq-bgimg(url("https://placehold.jp/40x40.png?text=Q"));
+    color: $gray;
   }
   p {
-    @include faq-bgimg;
-    background-image: url("https://placehold.jp/40x40.png?text=A");
+    @include faq-bgimg(url("https://placehold.jp/40x40.png?text=A"));
     font-size: 0.8rem;
   }
 }
 
 // Login
+
+// Cart
+.cart-table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 1000px;
+  margin: 0 auto;
+  td{
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    &:first-child {
+      width: 180px;
+      background-color: $lightgray;
+    }
+  }
+}

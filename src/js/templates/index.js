@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../../css/style.css';
+import { Carousel } from 'element-react';
 import Header from '../components/common/header';
 import Footer from '../components/common/footer';
+import PageTop from '../components/common/pagetop';
 import ProductItem from '../components/common/product_item';
 import NewsItem from '../components/common/news_item';
 
@@ -21,13 +23,13 @@ function Product() {
   return (
     <section className="product">
       <ul className="product-items">
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
-        <ProductItem />
+        <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム1" labelKind="new" labelText="NEW" title="タイトル1" expired="2018.10.08" />
+        <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム2" labelKind="new" labelText="NEW" title="タイトル2" expired="2018.10.08" />
+        <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム3" labelKind="soldout" labelText="SOLDOUT" title="タイトル3" expired="2018.10.11" />
+        <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム4" labelKind="new" labelText="NEW" title="タイトル4" expired="2018.10.13" />
+        <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム5" labelKind="new" labelText="NEW" title="タイトル5" expired="2018.10.15" />
       </ul>
-      <button className="product-list">一覧へ</button>
+      <button className="product-list-button">終了一覧へ</button>
     </section>
   );
 }
@@ -39,7 +41,7 @@ function News() {
       <ul>
         <NewsItem date="2018.10.01" className="label-new" labelText="NEW" url="/privacy" newsText="Hello World" />
         <NewsItem date="2018.9.01" className="label-new" labelText="NEW" url="/" newsText="Hello World" />
-        <NewsItem date="2018.8.01" className="label-soldout" labelText="INFO" url="/contact" newsText="こんにちは" />
+        <NewsItem date="2018.8.01" className="label-info" labelText="INFO" url="/contact" newsText="こんにちは" />
         <NewsItem date="2018.7.01" className="label-new" labelText="NEW" url="/" newsText="Hello World" />
       </ul>
     </section>

@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class ProductItem extends React.Component {
   render() {
+    const className = "product-label label-" + this.props.labelKind;
     return (
       <li>
-        <a href="#">
-          <figure><img src="https://placehold.jp/300x200.png" alt="アイテム1" /></figure>
-          <div className="item-card">
-            <p className="label label-new">NEW</p>
-            <h4>テキスト1</h4>
-             <p className="expired">テキスト1</p>
-           </div>
-        </a>
+        <Link to="/">
+          <figure><img src={this.props.imgSrc} alt={this.props.imgAlt} /></figure>
+          <div className="product-card">
+            <p className={className}>{this.props.labelText}</p>
+            <h4>{this.props.title}</h4>
+            <p className="product-expired">{this.props.expired} まで</p>
+          </div>
+        </Link>
       </li>
     );
   }

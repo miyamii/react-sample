@@ -7,7 +7,7 @@ import SectionTitle from '../../components/mypage/section_title';
 function ContactForm() {
   return (
     <Form className="contact-form" action="#" method="post">
-      <p className="text">テキストが入ります。</p>
+      <p className="mypage-text">テキストが入ります。</p>
       <table className="mypage-table" rules="all">
         <tr>
           <td>お名前<span className="required">※</span></td>
@@ -28,7 +28,7 @@ function ContactForm() {
           <td>
             〒&nbsp;<Input className="input-short" size="mini" name="postal-code1"/>
             &nbsp;-&nbsp;<Input className="input-short" size="mini" name="postal-code2"/><br />
-            <Button className="button-middle">自動住所入力</Button><br />
+            <Button className="normal-button">自動住所入力</Button><br />
             <p className="attention">赤字テキスト</p>
           </td>
         </tr>
@@ -80,7 +80,8 @@ function ContactForm() {
           </td>
         </tr>
         <tr>
-          <td>お問い合わせ内容<span className="required">※</span></td>
+          <td>お問い合わせ内容<span className="required">※</span><br/>
+           (全角1000字以内)</td>
           <td>
             <Input type="textarea" name="summary"/>
             <p className="attention">赤字テキスト</p>
@@ -88,7 +89,7 @@ function ContactForm() {
         </tr>
       </table>
       <div className="button-wrapper">
-        <Button className="button-middle" type="primary" size="mini" nativeType="submit">確認ページへ</Button>
+        <Button className="confirm-button" size="small" nativeType="submit">確認ページへ</Button>
       </div>
     </Form>
   );
