@@ -22,8 +22,8 @@ function HeaderNav() {
         {/* ログイン時と非ログイン時でボタンの数が変わる */}
         <div className="button-area">
           <Link to="/mypage"><Button size="small" className="mypage-button"><i className="fas fa-user fa-lg fa-fw" />マイページ</Button></Link>
-          <Link to="/entry"><Button size="small" className="entry-button"><i className="fas fa-edit fa-lg fa-fw" />会員登録</Button></Link>
-          <Link to="/cart"><Button size="small" className="cart-button"><i className="fas fa-cart-plus fa-lg fa-fw" />カートの中を見る</Button></Link>
+          <Link to="/entry"><Button size="small" className="orange-button"><i className="fas fa-edit fa-lg fa-fw" />会員登録</Button></Link>
+          <Link to="/cart"><Button size="small" className="orange-button"><i className="fas fa-cart-plus fa-lg fa-fw" />カートの中を見る</Button></Link>
         </div>
       </form>
     </div>

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* 全共通 */
 body {
   color: #333; }
 
@@ -23,6 +25,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+th, td {
+  padding: 10px; }
+
 .container {
   display: grid; }
 
@@ -39,6 +44,7 @@ ul {
   height: 7px;
   background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px); }
 
+/* Common共通 */
 .common-header {
   width: 1000px;
   height: 50px;
@@ -82,6 +88,42 @@ ul {
     font-size: 12px;
     margin: 0 0 20px 0; }
 
+.page-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0  20px 20px 0; }
+  .page-top i {
+    color: orange; }
+
+.common-list {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto; }
+  .common-list::after {
+    content: "";
+    display: block;
+    max-width: 1000px;
+    height: 150px; }
+
+.common-title {
+  padding: 50px 0;
+  background-color: #eee; }
+  .common-title .common-h1 {
+    text-align: center;
+    font-size: 24px; }
+
+.common-list-item {
+  max-width: 1000px;
+  margin: 50px auto 0 auto; }
+  .common-list-item .common-h2 {
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
+    text-align: left; }
+  .common-list-item .text {
+    font-size: 14px; }
+
+/* Top */
 .top {
   width: 1000px;
   height: 600px;
@@ -163,12 +205,10 @@ ul {
       .news .news-item p a:hover {
         opacity: 0.7; }
     .news .news-item .news-date {
-      padding: 3px 0 0 10px; }
+      padding: 3px 0 0 10px;
+      font-weight: bold; }
     .news .news-item .news-text {
       font-size: 15px; }
-
-.news-date {
-  font-weight: bold; }
 
 .info {
   width: 1000px;
@@ -210,33 +250,7 @@ ul {
   font-size: 12px;
   background-color: #555; }
 
-.common-list {
-  width: 1000px;
-  height: auto;
-  margin: 0 auto; }
-  .common-list::after {
-    content: "";
-    display: block;
-    max-width: 1000px;
-    height: 150px; }
-
-.common-title {
-  padding: 50px 0;
-  background-color: #eee; }
-  .common-title .common-h1 {
-    text-align: center;
-    font-size: 24px; }
-
-.common-list-item {
-  max-width: 1000px;
-  margin: 50px auto 0 auto; }
-  .common-list-item .common-h2 {
-    font-weight: normal;
-    border-bottom: 1px solid #ddd;
-    text-align: left; }
-  .common-list-item .text {
-    font-size: 14px; }
-
+/* Mypage */
 .mypage-header {
   width: 1000px;
   height: 70px;
@@ -271,41 +285,29 @@ ul {
         color: orange;
         height: 30px;
         font-weight: bold;
-        border-radius: 8px;
-        margin: 0 10px 0 0; }
+        border-radius: 7px; }
         .mypage-header .nav .button-area .mypage-button:hover {
           opacity: 0.8; }
-      .mypage-header .nav .button-area .entry-button {
+      .mypage-header .nav .button-area .orange-button {
         background-color: orange;
         border: 1px solid orange;
         color: #fff;
         height: 30px;
         font-weight: bold;
-        border-radius: 8px;
-        margin: 0 10px 0 0; }
-        .mypage-header .nav .button-area .entry-button:hover {
-          opacity: 0.8; }
-      .mypage-header .nav .button-area .cart-button {
-        background-color: orange;
-        border: 1px solid orange;
-        color: #fff;
-        height: 30px;
-        font-weight: bold;
-        border-radius: 8px; }
-        .mypage-header .nav .button-area .cart-button:hover {
+        border-radius: 7px;
+        margin: 0 0 0 10px; }
+        .mypage-header .nav .button-area .orange-button:hover {
           opacity: 0.8; }
 
 .mypage-table {
   border-collapse: collapse;
   border: 1px solid #ccc;
   width: 1000px;
-  margin: 0 auto; }
-  .mypage-table td {
-    padding: 5px 10px;
-    font-size: 0.75rem; }
-    .mypage-table td:first-child {
-      width: 180px;
-      background-color: #eee; }
+  margin: 0 auto;
+  font-size: 0.75rem; }
+  .mypage-table td:first-child {
+    width: 180px;
+    background-color: #eee; }
 
 .confirm-button {
   background-color: skyblue;
@@ -313,7 +315,7 @@ ul {
   color: #fff;
   height: 30px;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 7px;
   margin: 30px 0; }
   .confirm-button:hover {
     opacity: 0.8; }
@@ -331,8 +333,8 @@ ul {
   font-weight: bold;
   color: orange; }
 
-.mypage-text {
-  font-size: 0.8rem; }
+.mypage-text, .cart-button-area .cart-text {
+  font-size: 0.75rem; }
 
 .mypage-list {
   width: 1000px;
@@ -354,7 +356,7 @@ ul {
       padding: 0 10px;
       margin: 20px 0; }
       .mypage-footer .footer-nav .nav-item a {
-        color: orangered; }
+        color: orange; }
     .mypage-footer .footer-nav li + li {
       border-left: 1px dotted #aaa; }
   .mypage-footer .copyright {
@@ -362,6 +364,7 @@ ul {
     font-size: 0.75rem;
     margin: 0 0 20px 0; }
 
+/* Mypage table共通 */
 .required {
   color: red;
   font-size: 12px; }
@@ -378,10 +381,14 @@ ul {
 .select {
   width: 200px; }
 
-.attention {
+.attention, .cart-attention {
   color: red;
   font-size: 0.7rem; }
 
+.button-wrapper {
+  margin: 0 auto; }
+
+/* Faq */
 .faq-item h3 {
   background-image: url("https://placehold.jp/40x40.png?text=Q");
   background-repeat: no-repeat;
@@ -396,14 +403,77 @@ ul {
   padding: 10px 0 0 50px;
   font-size: 0.8rem; }
 
+/* Login */
+/* Cart */
 .cart-table {
   border-collapse: collapse;
   border: 1px solid #ccc;
   width: 1000px;
-  margin: 0 auto; }
-  .cart-table td {
-    padding: 5px 10px;
-    font-size: 0.75rem; }
-    .cart-table td:first-child {
-      width: 180px;
+  margin: 0 auto;
+  font-size: 0.75rem; }
+  .cart-table th {
+    background-color: #eee;
+    text-align: center; }
+  .cart-table .cart-product-total {
+    text-align: right; }
+    .cart-table .cart-product-total td:first-child {
       background-color: #eee; }
+  .cart-table .cart-product-manipulation {
+    text-align: center; }
+    .cart-table .cart-product-manipulation .delete-button {
+      background-color: #555;
+      border: 1px solid #555;
+      color: #fff;
+      height: 30px;
+      font-weight: bold;
+      border-radius: 7px; }
+      .cart-table .cart-product-manipulation .delete-button:hover {
+        opacity: 0.8; }
+    .cart-table .cart-product-manipulation .later-button {
+      background-color: #eee;
+      border: 1px solid #aaa;
+      color: #333;
+      height: 30px;
+      font-weight: bold;
+      border-radius: 7px;
+      margin: 10px 0 0 0; }
+      .cart-table .cart-product-manipulation .later-button:hover {
+        opacity: 0.8; }
+  .cart-table .cart-product-img {
+    text-align: center; }
+    .cart-table .cart-product-img img {
+      width: 60px;
+      height: 60px; }
+  .cart-table .cart-product-name {
+    font-weight: bold; }
+  .cart-table .cart-product-price, .cart-table .cart-product-subtotal {
+    text-align: right; }
+
+.cart-button-area .cart-text {
+  text-align: center; }
+
+.cart-button-area .button-wrapper {
+  margin: 0 auto; }
+  .cart-button-area .button-wrapper .back-button {
+    background-color: #555;
+    border: 1px solid #555;
+    color: #fff;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 0 30px; }
+    .cart-button-area .button-wrapper .back-button:hover {
+      opacity: 0.8; }
+  .cart-button-area .button-wrapper .orange-button {
+    background-color: orange;
+    border: 1px solid orange;
+    color: #fff;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 7px;
+    margin: 0 0 0 10px; }
+    .cart-button-area .button-wrapper .orange-button:hover {
+      opacity: 0.8; }
+
+.cart-attention {
+  text-align: center; }

@@ -90,6 +90,7 @@ class Index extends React.Component {
         <Info />
         </div>
         <Footer />
+        <PageTop />
       </div>
     );
   }

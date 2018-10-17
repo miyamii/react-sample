@@ -28,6 +28,7 @@ class Privacy extends React.Component {
           </ul>
         </div>
         <Footer />
+        <PageTop />
       </div>
     );
   }

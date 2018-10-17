@@ -83,7 +83,7 @@ function ContactForm() {
           <td>お問い合わせ内容<span className="required">※</span><br/>
            (全角1000字以内)</td>
           <td>
-            <Input type="textarea" name="summary"/>
+            <Input type="textarea" name="content"/>
             <p className="attention">赤字テキスト</p>
           </td>
         </tr>

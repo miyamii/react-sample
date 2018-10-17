@@ -44,6 +44,7 @@ class Faq extends React.Component {
           </ul>
         </div>
         <Footer />
+        <PageTop />
       </div>
     );
   }
