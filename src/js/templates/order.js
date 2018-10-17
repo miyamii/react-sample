@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/mypage/header';
 import Footer from '../components/mypage/footer';
+import PageTop from '../components/mypage/pagetop';
 import SectionTitle from '../components/mypage/section_title';
 
 class Order extends React.Component {
@@ -34,11 +35,11 @@ class Order extends React.Component {
                 </tr>
                 <tr>
                   <td>メールアドレス</td>
-                  <td>info@sample.co.jp</td>
+                  <td><a href="#">info@sample.co.jp</a></td>
                 </tr>
                 <tr>
                   <td>URL</td>
-                  <td>https://sample.com</td>
+                  <td><a href="#">https://sample.com</a></td>
                 </tr>
                 <tr>
                   <td>備考1</td>
@@ -60,6 +61,7 @@ class Order extends React.Component {
             </li>
           </ul>
         </div>
+        <PageTop />
         <Footer />
       </div>
     );

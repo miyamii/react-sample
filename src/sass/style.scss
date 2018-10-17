@@ -55,8 +55,8 @@ th, td {
   height: 18px;
   padding: 3px 0;
   text-align: center;
-  color: $white;
   font-size: 12px;
+  color: $white;
   background-color: $color;
 }
 @mixin button-color($bgColor, $borderColor, $fontColor) {
@@ -110,6 +110,7 @@ th, td {
   grid-template-columns: 130px 1fr 90px;
   .logo {
     grid-column: 1 / 2;
+    z-index: 3;
     a:hover {
       opacity: 0.7;
     }
@@ -122,6 +123,7 @@ th, td {
       width: 45px;
       margin: -10px 0 0 0;
       align-self: center;
+      z-index: 3;
       a {
         color: $gray;
         &:hover {
@@ -157,7 +159,7 @@ th, td {
   }
 }
 
-.page-top {
+.common-pagetop {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -202,7 +204,8 @@ th, td {
 
 /* Top */
 .top {
-  @include content-box(600px);
+  @include content-box(550px);
+  width: 100%;
   figure {
     width: 750px;
     margin: 0 auto;
@@ -306,7 +309,13 @@ th, td {
     li {
       padding: 10px 0;
       border-bottom: 1px dotted $gray;
-       font-weight: bold;
+      font-weight: bold;
+      h3 {
+        margin: 0;
+      }
+      i {
+        color: $orange;
+      }
     }
     .info-text {
       font-size: 14px;
@@ -373,6 +382,12 @@ th, td {
       width: 180px;
       background-color: $lightgray;
     }
+    a {
+      color: $orange;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -403,11 +418,23 @@ th, td {
   margin-top: 80px;
 }
 .mypage-list-item {
-  // .text {
-  //   font-size: 0.8rem;
-  // }
+  h2 {
+    margin: 10px 0 20px 0;
+  }
+}
+.mypage-pagetop {
+  @include content-box;
+  height: 60px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  i {
+    color: $orange;
+  }
 }
 .mypage-footer {
+  @include content-box;
   height: 100px;
   grid-column: 1 / 2;
   border-top: 1px solid #ccc;
@@ -451,6 +478,9 @@ th, td {
 }
 .select {
   width: 200px;
+}
+.select-number {
+  width: 70px;
 }
 .attention {
   color: $red;
@@ -518,13 +548,19 @@ th, td {
     text-align: right;
   }
 }
+.cart-table-bottom-text{
+  @extend .mypage-text;
+  text-align: right;
+  margin: 0;
+}
 .cart-button-area {
+  margin: 0 0 30px 0;
   .cart-text {
     @extend .mypage-text;
     text-align: center;
   }
   .button-wrapper {
-    margin: 0 auto;
+    width: 365px;
     .back-button {
       @include button-base($darkgray, $darkgray, $white);
       padding: 0 30px;
@@ -537,5 +573,12 @@ th, td {
 }
 .cart-attention {
   @extend .attention;
-  text-align: center;
+}
+
+/* Carousel(あとで個別ファイルにする) */
+// element.style {
+//   transform: translateX(125px) scale(1);
+// }
+.el-carousel {
+  margin: -20px;
 }

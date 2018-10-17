@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
+import PageTop from '../../components/mypage/pagetop';
 import { Form, Input, Select, Button } from 'element-react';
 import SectionTitle from '../../components/mypage/section_title';
 
@@ -106,6 +107,7 @@ class Contact extends React.Component {
             <ContactForm />
           </div>
         </div>
+        <PageTop />
         <Footer />
       </div>
     );

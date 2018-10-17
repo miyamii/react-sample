@@ -16,7 +16,7 @@ function CartTableRow() {
        <td className="cart-product-price">〇〇円</td>
       <td className="cart-product-quantity">
         {/* ここFor */}
-        <Select className="select-quantity" size="mini" placeholder="数量">
+        <Select className="select-quantity select-number" size="mini" placeholder="数量">
           <Select.Option value=""></Select.Option>
         </Select>
        </td>
@@ -55,8 +55,8 @@ function FormButton() {
     <div className="cart-button-area">
       <p className="cart-text">上記内容でよろしければ、 購入手続きへ ボタンを押してください。</p>
       <div className="button-wrapper">
-        <Button className="back-button" size="small">戻る</Button>
-        <Button className="orange-button" size="small">購入手続きへ</Button>
+        <Link to="/"><Button className="back-button" size="small">戻る</Button></Link>
+        <Link to="/detail"><Button className="orange-button" size="small">購入手続きへ</Button></Link>
         <Button className="orange-button" size="small">登録済み情報でくじを引く</Button>
       </div>
     </div>
@@ -65,7 +65,7 @@ function FormButton() {
 
 function Nothing() {
   return (
-    <p className="cart-attention">※現在カート内に商品はありません。</p>
+    <p className="cart-attention">※ 現在カート内に商品はありません。</p>
   );
 }
 
@@ -76,6 +76,7 @@ class CartItem extends React.Component {
         <Title title={this.props.title} />
         <form action="/" method="">
           <CartTable />
+          <p className="cart-table-bottom-text">全て税込表記</p>
           <FormButton />
           <Nothing />
         </form>

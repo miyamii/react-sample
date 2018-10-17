@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-// import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Header from '../components/mypage/header';
 import Footer from '../components/mypage/footer';
+import PageTop from '../components/mypage/pagetop';
 import CartItem from '../components/mypage/cart_item';
 
 class Cart extends React.Component {
@@ -15,6 +16,7 @@ class Cart extends React.Component {
             <CartItem title="あとで買うカートの中" />
           </ul>
         </div>
+        <PageTop />
         <Footer />
       </div>
     );

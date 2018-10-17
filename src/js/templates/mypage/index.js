@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
+import PageTop from '../../components/mypage/pagetop';
 import SectionTitle from '../../components/mypage/section_title';
 
 class Mypage extends React.Component {
@@ -13,6 +14,7 @@ class Mypage extends React.Component {
             <SectionTitle title="マイページ" />
           </div>
         </div>
+        <PageTop />
         <Footer />
       </div>
     );

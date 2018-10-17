@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class PageTop extends React.Component {
   render() {
     return (
-      <div className="common-pagetop">
-        <a href="#"><i className="fas fa-chevron-circle-up fa-3x" /></a>
+      <div className="mypage-pagetop">
+        <a href="#"><i className="fas fa-chevron-up fa-2x" /></a>
       </div>
     );
   }

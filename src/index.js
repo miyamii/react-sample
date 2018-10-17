@@ -35,9 +35,9 @@ ReactDOM.render(
     <Route path='/mypage/login' component={Login} />
     <Route path='/mypage/login/error' component={LoginError} />
     <Route path='/entry' component={Entry} />
-    <Route path='/entry/confirm' component={EntryConfirm} />
+    {/* <Route path='/entry/confirm' component={EntryConfirm} /> */}
     <Route path='/contact' component={Contact} />
-    <Route path='/contact/confirm' component={ContactConfirm} />
+    {/* <Route path='/contact/confirm' component={ContactConfirm} /> */}
     <Route path='/privacy' component={Privacy} />
     <Route path='/notice' component={Notice} />
     <Route path='/order' component={Order} />

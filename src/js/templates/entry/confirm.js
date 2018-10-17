@@ -1,0 +1,1 @@
+import PageTop from '../../components/mypage/pagetop';

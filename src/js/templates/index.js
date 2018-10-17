@@ -9,12 +9,24 @@ import ProductItem from '../components/common/product_item';
 import NewsItem from '../components/common/news_item';
 
 function TopSlider() {
+  const imgList = ['https://placehold.jp/750x500.png?text=A', 'https://placehold.jp/750x500.png?text=B', 'https://placehold.jp/750x500.png?text=C'];
   return (
     <section className="top">
-      <figure><img src="https://placehold.jp/750x500.png" alt="トップ"/></figure>
+      <Carousel interval="10000" type="flatcard" height="500px">
+        {
+          imgList.map((url, index) => {
+            return (
+              <Carousel.Item key={index}>
+                <h3><img src={url} /></h3>
+              </Carousel.Item>
+            )
+          })
+        }
+      </Carousel>
+      {/* <figure><img src="https://placehold.jp/750x500.png" alt="トップ"/></figure>
       <div className="slide-pager">
       { [1,2,3].map(() => <a href="#">●</a>)}
-      </div>
+      </div> */}
     </section>
   );
 }
@@ -29,7 +41,7 @@ function Product() {
         <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム4" labelKind="new" labelText="NEW" title="タイトル4" expired="2018.10.13" />
         <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム5" labelKind="new" labelText="NEW" title="タイトル5" expired="2018.10.15" />
       </ul>
-      <button className="product-list-button">終了一覧へ</button>
+      <button className="product-list-button">終了一覧へ<i className="fas fa-caret-right fa-lg fa-fw"/ ></button>
     </section>
   );
 }
@@ -58,9 +70,9 @@ function Info() {
             <h3>テキスト</h3>
             <p className="info-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
           </li>
-          <li className="pulldown">お支払い方法</li>
-          <li><Link to="/faq">よくあるご質問</Link></li>
-          <li><Link to="/contact">お問い合わせ</Link></li>
+          <li className="pulldown">お支払い方法&nbsp;<i className="fas fa-caret-down fa-lg fa-fw"/ ></li>
+          <li><Link to="/faq">よくあるご質問&nbsp;<i className="fas fa-caret-right fa-lg fa-fw"/ ></Link></li>
+          <li><Link to="/contact">お問い合わせ&nbsp;<i className="fas fa-caret-right fa-lg fa-fw"/ ></Link></li>
       </ul>
       </div>
       <div>

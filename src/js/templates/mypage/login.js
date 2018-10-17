@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
+import PageTop from '../../components/mypage/pagetop';
 import SectionTitle from '../../components/mypage/section_title';
 
 class Login extends React.Component {
@@ -11,6 +12,7 @@ class Login extends React.Component {
         <div className="container">
           <SectionTitle title="MYページ(ログイン)" />
         </div>
+        <PageTop />
         <Footer />
       </div>
     );
