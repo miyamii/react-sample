@@ -107,12 +107,15 @@ th, td {
     max-width: 1000px;
     height: 150px; }
 
-.common-title {
+.common-h1 {
   padding: 50px 0;
-  background-color: #eee; }
-  .common-title .common-h1 {
-    text-align: center;
-    font-size: 24px; }
+  text-align: center;
+  font-size: 24px;
+  background-color: #eee;
+  display: block; }
+
+.bg-white {
+  background-color: #fff; }
 
 .common-list-item {
   max-width: 1000px;
@@ -145,13 +148,14 @@ th, td {
 
 .product {
   width: 1000px;
-  height: 900px;
+  height: auto;
   margin: 0 auto; }
 
 .product-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 20px 0 50px; }
   .product-items li {
     max-width: 300px;
     height: 380px; }
@@ -183,7 +187,8 @@ th, td {
   font-size: 1rem;
   background-color: #eee;
   border-color: #aaa;
-  color: #333; }
+  color: #333;
+  margin: -30px 0 100px; }
   .product-list-button:hover {
     background-color: #90EE90;
     border-color: #90EE90;
@@ -323,6 +328,17 @@ th, td {
     width: 180px;
     background-color: #eee; }
 
+.normal-button {
+  height: 30px;
+  font-weight: bold;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  background-color: #eee;
+  border-color: #aaa;
+  color: #333; }
+  .normal-button:hover {
+    opacity: 0.8; }
+
 .confirm-button {
   height: 30px;
   font-weight: bold;
@@ -369,7 +385,7 @@ th, td {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end; }
-  .mypage-pagetop i {
+  .mypage-pagetop .icon-orange {
     color: orange; }
 
 .mypage-footer {
@@ -552,3 +568,58 @@ th, td {
 /* Carousel(あとで個別ファイルにする) */
 .el-carousel {
   margin: -20px; }
+
+/* Mypage Content(あとで移動) */
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  background-color: #fff; }
+
+/*タブのスタイル*/
+.tab-item {
+  width: calc(100%/5);
+  height: 40px;
+  border-bottom: 1px solid #aaa;
+  line-height: 50px;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+  display: block;
+  float: left;
+  transition: all 0.2s ease; }
+
+.tab-item:hover {
+  opacity: 0.7; }
+
+/*ラジオボタンを全て消す*/
+input[name="tab-item"] {
+  display: none; }
+
+/*タブ切り替えの中身のスタイル*/
+.tab-content {
+  display: none;
+  clear: both;
+  overflow: hidden; }
+
+/*選択されているタブのコンテンツのみを表示*/
+#history:checked ~ .history-content,
+#change:checked ~ .change-content,
+#delivery:checked ~ .delivery-content,
+#refusal:checked ~ .refusal-content,
+#change-card:checked ~ .change-card-content {
+  display: block; }
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 3px solid orange;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa; }

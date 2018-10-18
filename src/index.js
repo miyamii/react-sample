@@ -20,6 +20,7 @@ import Privacy from './js/templates/privacy';
 import Notice from './js/templates/notice';
 import Order from './js/templates/order';
 import Faq from './js/templates/faq';
+import Archives from './js/templates/archives';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -42,6 +43,7 @@ ReactDOM.render(
       <Route path='/notice' component={Notice} />
       <Route path='/order' component={Order} />
       <Route path='/faq' component={Faq} />
+      <Route path='/archives' component={Archives} />
     </Switch>
     {/*
     <Route path="/news/:id" component={} /> */}

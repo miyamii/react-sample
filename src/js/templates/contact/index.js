@@ -29,14 +29,14 @@ function ContactForm() {
           <td>
             〒&nbsp;<Input className="input-short" size="mini" name="postal-code1"/>
             &nbsp;-&nbsp;<Input className="input-short" size="mini" name="postal-code2"/><br />
-            <Button className="normal-button">自動住所入力</Button><br />
-            <p className="attention">赤字テキスト</p>
+            <Button className="normal-button"size="small">自動住所入力</Button>
+            <p className="text">テキストテキストテキスト</p>
           </td>
         </tr>
         <tr>
           <td>住所</td>
           <td>
-            <Select className="select" name="address1" placeholder="種別を選択してください。" size="mini">
+            <Select className="select" name="address1" placeholder="都道府県を選択" size="mini">
               <Select.Option value="北海道">北海道</Select.Option>
               <Select.Option value="東京都">東京都</Select.Option>
               <Select.Option value="福岡県">福岡県</Select.Option>
@@ -45,7 +45,7 @@ function ContactForm() {
             市区町村名 (例：〇〇市〇〇町)<br />
             <Input className="input-long" size="mini" name="address3"/><br />
             番地・ビル名 (例：1-2-3)<br />
-            <p className="attention">赤字テキスト</p>
+            <p className="attention">赤字テキスト赤字テキスト</p>
           </td>
         </tr>
         <tr>
@@ -61,7 +61,7 @@ function ContactForm() {
           <td>
             <Input className="input-long" size="mini" type="mail" name="mail1"/><br />
             <Input className="input-long" size="mini" type="mail" name="mail2"/><br />
-            <p  className="attention">赤字テキスト</p>
+            <p  className="attention">赤字テキスト赤字テキスト</p>
           </td>
         </tr>
         <tr>
@@ -85,7 +85,7 @@ function ContactForm() {
            (全角1000字以内)</td>
           <td>
             <Input type="textarea" name="content"/>
-            <p className="attention">赤字テキスト</p>
+            <p className="attention">赤字テキスト赤字テキスト赤字テキスト</p>
           </td>
         </tr>
       </table>

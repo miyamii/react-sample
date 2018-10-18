@@ -7,6 +7,7 @@ import Footer from '../components/common/footer';
 import PageTop from '../components/common/pagetop';
 import ProductItem from '../components/common/product_item';
 import NewsItem from '../components/common/news_item';
+import Info from '../components/common/info';
 
 function TopSlider() {
   const imgList = ['https://placehold.jp/750x500.png?text=A', 'https://placehold.jp/750x500.png?text=B', 'https://placehold.jp/750x500.png?text=C'];
@@ -41,7 +42,7 @@ function Product() {
         <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム4" labelKind="new" labelText="NEW" title="タイトル4" expired="2018.10.13" />
         <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム5" labelKind="new" labelText="NEW" title="タイトル5" expired="2018.10.15" />
       </ul>
-      <button className="product-list-button">終了一覧へ<i className="fas fa-caret-right fa-lg fa-fw"/ ></button>
+      <Link to="/archives"><button className="product-list-button" onclick="location.href='/archives'">アーカイブ一覧へ<i className="fas fa-caret-right fa-lg fa-fw"/ ></button></Link>
     </section>
   );
 }
@@ -57,36 +58,6 @@ function News() {
         <NewsItem date="2018.7.01" className="label-new" labelText="NEW" url="/" newsText="Hello World" />
       </ul>
     </section>
-  );
-}
-
-function Info() {
-  return (
-    <section className="info">
-      <div className="info-guide">
-        <h2 className="info-title stripe">Information</h2>
-        <ul>
-          <li>
-            <h3>テキスト</h3>
-            <p className="info-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </li>
-          <li className="pulldown">お支払い方法&nbsp;<i className="fas fa-caret-down fa-lg fa-fw"/ ></li>
-          <li><Link to="/faq">よくあるご質問&nbsp;<i className="fas fa-caret-right fa-lg fa-fw"/ ></Link></li>
-          <li><Link to="/contact">お問い合わせ&nbsp;<i className="fas fa-caret-right fa-lg fa-fw"/ ></Link></li>
-      </ul>
-      </div>
-      <div>
-        <Timeline />
-      </div>
-    </section>
-  );
-}
-
-function Timeline() {
-  return (
-    <div className="info-timeline">
-      <hr />
-    </div>
   );
 }
 

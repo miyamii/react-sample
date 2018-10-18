@@ -89,7 +89,7 @@ th, td {
   font-size: 0.75rem;
 }
 
-.stripe{
+.stripe {
   position: relative;
   padding: 0.3em;
   &::after {
@@ -178,14 +178,15 @@ th, td {
     height: 150px;
   }
 }
-
-.common-title {
+.common-h1 {
   padding: 50px 0;
+  text-align: center;
+  font-size: 24px;
   background-color: $lightgray;
-  .common-h1 {
-    text-align: center;
-    font-size: 24px;
+  display: block;
   }
+.bg-white {
+  background-color: $white;
 }
 
 .common-list-item {
@@ -224,12 +225,13 @@ th, td {
   }
 }
 .product {
-  @include content-box(900px);
+  @include content-box(auto);
 }
 .product-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 20px 0 50px;
   li {
     max-width: 300px;
     height: 380px;
@@ -264,6 +266,7 @@ th, td {
 .product-list-button {
   @include large-button-base;
   @include button-color($lightgray, $gray, $black);
+  margin: -30px 0 80px;
   &:hover {
     @include button-color($green, $green, $white)
   }
@@ -397,7 +400,10 @@ th, td {
     }
   }
 }
-
+.normal-button {
+  @include button-base;
+  @include button-color($lightgray, $gray, $black);
+}
 .confirm-button {
   @include button-base;
   @include button-color($blue, $blue, $white);
@@ -437,7 +443,7 @@ th, td {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  i {
+  .icon-orange {
     color: $orange;
   }
 }
@@ -612,4 +618,58 @@ th, td {
 // }
 .el-carousel {
   margin: -20px;
+}
+
+/* Mypage Content(あとで移動) */
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  @include content-box(auto);
+  padding-bottom: 40px;
+  background-color: $white;
+}
+  /*タブのスタイル*/
+.tab-item {
+  width: calc(100%/5);
+  height: 40px;
+  border-bottom: 1px solid $gray;
+  line-height: 50px;
+  font-size: 1rem;
+  text-align: center;
+  color: $black;
+  display: block;
+  float: left;
+  transition: all 0.2s ease;
+}
+.tab-item:hover {
+  opacity: 0.7;
+}
+  /*ラジオボタンを全て消す*/
+input[name="tab-item"] {
+  display: none;
+}
+  /*タブ切り替えの中身のスタイル*/
+.tab-content {
+  display: none;
+  clear: both;
+  overflow: hidden;
+}
+  /*選択されているタブのコンテンツのみを表示*/
+#history:checked ~ .history-content,
+#change:checked ~ .change-content,
+#delivery:checked ~ .delivery-content,
+#refusal:checked ~ .refusal-content,
+#change-card:checked ~ .change-card-content {
+  display: block;
+}
+  /*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 3px solid $orange;
+  border-bottom: 1px solid $white;
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;
 }

@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 
 class Title extends React.Component {
   render() {
+    const className = this.props.className == undefined ? '' : this.props.className;
     return (
-      <div className="common-title">
-        <h1 className="common-h1"><span className="stripe">{this.props.title}</span></h1>
-      </div>
+      <h1 className={'common-h1 ' + className}><span className="stripe">{this.props.title}</span></h1>
     );
   }
 }
