@@ -50,31 +50,32 @@ th, td {
   height: $height;
   margin: 0 auto;
 }
-@mixin label-base($color) {
+@mixin label-base {
   width: 90px;
   height: 18px;
   padding: 3px 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.9rem;
+}
+@mixin label-color($color) {
   color: $white;
   background-color: $color;
 }
-@mixin button-color($bgColor, $borderColor, $fontColor) {
-  background-color: $bgColor;
-  border: 1px solid $borderColor;
-  color: $fontColor;
-}
-@mixin button-base($bgColor, $borderColor, $fontColor) {
-  @include button-color($bgColor, $borderColor, $fontColor);
+@mixin button-base {
   height: 30px;
   font-weight: bold;
+  border: 1px solid $gray;
   border-radius: 7px;
   &:hover {
     opacity: 0.8;
   }
 }
-@mixin large-button-base($bgColor, $borderColor, $fontColor) {
-  @include button-color($bgColor, $borderColor, $fontColor);
+@mixin button-color($bgColor, $borderColor, $fontColor) {
+  background-color: $bgColor;
+  border-color: $borderColor;
+  color: $fontColor;
+}
+@mixin large-button-base {
   width: 1000px;
   height: 50px;
   font-size: 1rem;
@@ -85,22 +86,21 @@ th, td {
   border: 1px solid #ccc;
   width: 1000px;
   margin: 0 auto;
-  // padding: 5px 10px;
   font-size: 0.75rem;
 }
 
 .stripe{
   position: relative;
   padding: 0.3em;
-}
-.stripe:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 100%;
-  height: 7px;
-  background: repeating-linear-gradient(-45deg, $blue, $blue 2px, white 2px, white 4px);
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 7px;
+    background: repeating-linear-gradient(-45deg, $blue, $blue 2px, white 2px, white 4px);
+  }
 }
 
 /* Common共通 */
@@ -164,7 +164,7 @@ th, td {
   bottom: 0;
   right: 0;
   margin: 0  20px 20px 0;
-  i {
+  .icon-orange {
     color: $orange;
   }
 }
@@ -219,7 +219,7 @@ th, td {
     justify-content: space-around;
     a {
       align-self: center;
-      color: $gray;
+      // color: $gray;
     }
   }
 }
@@ -262,7 +262,8 @@ th, td {
   }
 }
 .product-list-button {
-  @include large-button-base($lightgray, $gray, $black);
+  @include large-button-base;
+  @include button-color($lightgray, $gray, $black);
   &:hover {
     @include button-color($green, $green, $white)
   }
@@ -328,49 +329,61 @@ th, td {
 }
 
 .label-new {
-  @include label-base($orange);
+  @include label-base;
+  @include label-color($orange);
 }
 .label-soldout, .label-info {
-  @include label-base($darkgray);
+  @include label-base;
+  @include label-color($darkgray);
 }
 
 /* Mypage */
+.mypage-text-link {
+  color: $orange;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .mypage-header {
-  @include content-box(70px);
+  height: 70px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  // grid-template-columns: 150px 1fr 300px;
-  justify-content: space-between;
   background-color: $white;
   border-bottom: 3px solid $orange;
   z-index: 1;
-  .logo {
-    justify-content: flex-end;
-    align-items: flex-start;
-    a:hover {
-      opacity: 0.7;
-    }
-  }
-  .nav {
-    grid-column: 3 / 4;
+  .mypage-header-inner {
+    @include content-box(70px);
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    .login-area {
-      height: 32px;
-    }
-    .button-area {
-      height: 38px;
-      display: flex;
-      .mypage-button{
-        @include button-base($lightgray, $lightgray, $orange);
+    justify-content: space-between;
+    .logo {
+      justify-content: flex-end;
+      align-items: flex-start;
+      a:hover {
+        opacity: 0.7;
       }
-      .orange-button {
-        @include button-base($orange, $orange, $white);
-        margin: 0 0 0 10px;
+    }
+    .nav {
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .login-area {
+        height: 32px;
+      }
+      .button-area {
+        height: 38px;
+        display: flex;
+        .mypage-button{
+          @include button-base;
+          @include button-color($lightgray, $lightgray, $orange);
+        }
+        .orange-button {
+          @include button-base;
+          @include button-color($orange, $orange, $white);
+          margin: 0 0 0 10px;
+        }
       }
     }
   }
@@ -382,17 +395,12 @@ th, td {
       width: 180px;
       background-color: $lightgray;
     }
-    a {
-      color: $orange;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 }
 
 .confirm-button {
-  @include button-base($blue, $blue, $white);
+  @include button-base;
+  @include button-color($blue, $blue, $white);
   margin: 30px 0;
 }
 
@@ -405,8 +413,8 @@ th, td {
 }
 .mypage-h3 {
   text-align: left;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: 900;
   color: $orange;
 }
 .mypage-text {
@@ -447,9 +455,6 @@ th, td {
       font-size: 12px;
       padding: 0 10px;
       margin: 20px 0;
-      a {
-        color: $orange;
-      }
     }
     li+ li {
       border-left: 1px dotted $gray;
@@ -510,6 +515,28 @@ th, td {
 }
 
 /* Login */
+.login-form {
+  background-color: $lightgray;
+  padding: 10px 20px;
+  .mypage-text {
+    width: 200px;
+  }
+  .login-button {
+    @include button-base;
+    @include button-color($orange, $orange, $white);
+    padding: 0 30px;
+  }
+}
+.guidance-wrapper {
+  .button-area {
+    background-color: $lightgray;
+    padding: 10px;
+    .entry-button {
+      @include button-base;
+      @include button-color($orange, $orange, $white);
+    }
+  }
+}
 
 /* Cart */
 .cart-table {
@@ -527,10 +554,12 @@ th, td {
   .cart-product-manipulation {
     text-align: center;
     .delete-button {
-      @include button-base($darkgray, $darkgray, $white);
+      @include button-base;
+      @include button-color($darkgray, $darkgray, $white);
     }
     .later-button {
-      @include button-base($lightgray, $gray, $black);
+      @include button-base;
+      @include button-color($lightgray, $gray, $black);
       margin: 10px 0 0 0;
     }
   }
@@ -562,11 +591,13 @@ th, td {
   .button-wrapper {
     width: 365px;
     .back-button {
-      @include button-base($darkgray, $darkgray, $white);
+      @include button-base;
+      @include button-color($darkgray, $darkgray, $white);
       padding: 0 30px;
     }
     .orange-button {
-      @include button-base($orange, $orange, $white);
+      @include button-base;
+      @include button-color($orange, $orange, $white);
       margin: 0 0 0 10px;
     }
   }

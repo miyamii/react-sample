@@ -24,25 +24,25 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
-  <Switch>
-    <Route exact path='/' component={Index} />
-    <Route path='/cart' component={Cart} />
-    <Route path='/mypage' component={Mypage} />
-    <Route path='/mypage/change' component={Change} />
-    <Route path='/mypage/delivery' component={Delivery} />
-    <Route path='/mypage/refusal' component={Refusal} />
-    <Route path='/mypage/change_card' component={ChangeCard} />
-    <Route path='/mypage/login' component={Login} />
-    <Route path='/mypage/login/error' component={LoginError} />
-    <Route path='/entry' component={Entry} />
-    {/* <Route path='/entry/confirm' component={EntryConfirm} /> */}
-    <Route path='/contact' component={Contact} />
-    {/* <Route path='/contact/confirm' component={ContactConfirm} /> */}
-    <Route path='/privacy' component={Privacy} />
-    <Route path='/notice' component={Notice} />
-    <Route path='/order' component={Order} />
-    <Route path='/faq' component={Faq} />
-  </Switch>
+    <Switch>
+      <Route exact path='/' component={Index} />
+      <Route path='/cart' component={Cart} />
+      <Route path='/mypage/change' component={Change} />
+      <Route path='/mypage/delivery' component={Delivery} />
+      <Route path='/mypage/refusal' component={Refusal} />
+      <Route path='/mypage/change_card' component={ChangeCard} />
+      <Route path='/mypage/login/error' component={LoginError} />
+      <Route path='/mypage/login' component={Login} />
+      <Route path='/mypage' component={Mypage} />
+      <Route path='/entry/confirm' component={EntryConfirm} />
+      <Route path='/entry' component={Entry} />
+      <Route path='/contact/confirm' component={ContactConfirm} />
+      <Route path='/contact' component={Contact} />
+      <Route path='/privacy' component={Privacy} />
+      <Route path='/notice' component={Notice} />
+      <Route path='/order' component={Order} />
+      <Route path='/faq' component={Faq} />
+    </Switch>
     {/*
     <Route path="/news/:id" component={} /> */}
   </BrowserRouter>

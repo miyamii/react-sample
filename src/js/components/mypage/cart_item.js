@@ -17,7 +17,12 @@ function CartTableRow() {
       <td className="cart-product-quantity">
         {/* ここFor */}
         <Select className="select-quantity select-number" size="mini" placeholder="数量">
-          <Select.Option value=""></Select.Option>
+          <Select.Option value="1"></Select.Option>
+          <Select.Option value="2"></Select.Option>
+          <Select.Option value="3"></Select.Option>
+          <Select.Option value="4"></Select.Option>
+          <Select.Option value="5"></Select.Option>
+          <Select.Option value="100"></Select.Option>
         </Select>
        </td>
        <td className="cart-product-subtotal">{/*this.state.price * quantity*/}〇〇円</td>
@@ -25,29 +30,35 @@ function CartTableRow() {
   );
 }
 
-function CartTable() {
-  const numbers = [];
+class CartForm extends React.Component {
+  render () {
+    const numbers = [];
   for(let i = 0; i < 100; i++){
     numbers.push(i);
   }
   const quantity = [];
   return (
-    <table className="cart-table" rules="all">
-      <tr>
-        <th>操作</th>
-        <th>商品写真</th>
-        <th>商品名</th>
-        <th>単価</th>
-        <th>数量</th>
-        <th>小計</th>
-      </tr>
-      <CartTableRow />
-      <tr className="cart-product-total">
-        <td colspan="5">合計</td>
-        <td>〇〇円</td>
-      </tr>
-    </table>
+    <form action="/" method="">
+      <table className="cart-table" rules="all">
+        <tr>
+          <th>操作</th>
+          <th>商品写真</th>
+          <th>商品名</th>
+          <th>単価</th>
+          <th>数量</th>
+          <th>小計</th>
+        </tr>
+        <CartTableRow />
+        <tr className="cart-product-total">
+          <td colspan="5">合計</td>
+          <td>〇〇円</td>
+        </tr>
+      </table>
+      <p className="cart-table-bottom-text">全て税込表記</p>
+      {this.props.isAfter ? '' : <FormButton />}
+    </form>
   );
+  }
 }
 
 function FormButton() {
@@ -65,7 +76,7 @@ function FormButton() {
 
 function Nothing() {
   return (
-    <p className="cart-attention">※ 現在カート内に商品はありません。</p>
+    <p className="cart-attention">※ 現在商品はありません。</p>
   );
 }
 
@@ -74,12 +85,7 @@ class CartItem extends React.Component {
     return (
       <li className="cart-item">
         <Title title={this.props.title} />
-        <form action="/" method="">
-          <CartTable />
-          <p className="cart-table-bottom-text">全て税込表記</p>
-          <FormButton />
-          <Nothing />
-        </form>
+        {this.props.buyNum === 0 ? <Nothing /> : <CartForm />}
       </li>
     );
   }

@@ -5,10 +5,10 @@ function FooterNav() {
   return (
     <div>
       <ul className="footer-nav">
-        <li className="nav-item"><Link to="/privacy">個人情報保護方針</Link></li>
-        <li className="nav-item"><Link to="/contact">お問い合わせ</Link></li>
-        <li className="nav-item"><Link to="/notice">注意事項</Link></li>
-        <li className="nav-item"><Link to="/order">特定商取引法表示</Link></li>
+        <li className="nav-item"><Link to="/privacy" className="mypage-text-link">個人情報保護方針</Link></li>
+        <li className="nav-item"><Link to="/contact" className="mypage-text-link">お問い合わせ</Link></li>
+        <li className="nav-item"><Link to="/notice" className="mypage-text-link">注意事項</Link></li>
+        <li className="nav-item"><Link to="/order" className="mypage-text-link">特定商取引法表示</Link></li>
       </ul>
     </div>
   );

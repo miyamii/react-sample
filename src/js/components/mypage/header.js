@@ -34,8 +34,10 @@ class MypageHeader extends React.Component {
   render() {
     return (
       <header className="mypage-header">
-        <Logo />
-        <HeaderNav />
+        <div className="mypage-header-inner">
+          <Logo />
+          <HeaderNav />
+        </div>
       </header>
     );
   }

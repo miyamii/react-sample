@@ -34,15 +34,14 @@ th, td {
 .stripe {
   position: relative;
   padding: 0.3em; }
-
-.stripe:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 100%;
-  height: 7px;
-  background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px); }
+  .stripe::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 7px;
+    background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px); }
 
 /* Common共通 */
 .common-header {
@@ -95,7 +94,7 @@ th, td {
   bottom: 0;
   right: 0;
   margin: 0  20px 20px 0; }
-  .common-pagetop i {
+  .common-pagetop .icon-orange {
     color: orange; }
 
 .common-list {
@@ -142,8 +141,7 @@ th, td {
     flex-direction: row;
     justify-content: space-around; }
     .top .slide-pager a {
-      align-self: center;
-      color: #aaa; }
+      align-self: center; }
 
 .product {
   width: 1000px;
@@ -180,15 +178,15 @@ th, td {
     width: 30%; }
 
 .product-list-button {
-  background-color: #eee;
-  border: 1px solid #aaa;
-  color: #333;
   width: 1000px;
   height: 50px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  background-color: #eee;
+  border-color: #aaa;
+  color: #333; }
   .product-list-button:hover {
     background-color: #90EE90;
-    border: 1px solid #90EE90;
+    border-color: #90EE90;
     color: #fff; }
 
 .news {
@@ -244,7 +242,7 @@ th, td {
   height: 18px;
   padding: 3px 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.9rem;
   color: #fff;
   background-color: orange; }
 
@@ -253,58 +251,67 @@ th, td {
   height: 18px;
   padding: 3px 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.9rem;
   color: #fff;
   background-color: #555; }
 
 /* Mypage */
+.mypage-text-link {
+  color: orange; }
+  .mypage-text-link:hover {
+    text-decoration: underline; }
+
 .mypage-header {
-  width: 1000px;
   height: 70px;
-  margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
   background-color: #fff;
   border-bottom: 3px solid orange;
   z-index: 1; }
-  .mypage-header .logo {
-    justify-content: flex-end;
-    align-items: flex-start; }
-    .mypage-header .logo a:hover {
-      opacity: 0.7; }
-  .mypage-header .nav {
-    grid-column: 3 / 4;
+  .mypage-header .mypage-header-inner {
+    width: 1000px;
+    height: 70px;
+    margin: 0 auto;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end; }
-    .mypage-header .nav .login-area {
-      height: 32px; }
-    .mypage-header .nav .button-area {
-      height: 38px;
-      display: flex; }
-      .mypage-header .nav .button-area .mypage-button {
-        background-color: #eee;
-        border: 1px solid #eee;
-        color: orange;
-        height: 30px;
-        font-weight: bold;
-        border-radius: 7px; }
-        .mypage-header .nav .button-area .mypage-button:hover {
-          opacity: 0.8; }
-      .mypage-header .nav .button-area .orange-button {
-        background-color: orange;
-        border: 1px solid orange;
-        color: #fff;
-        height: 30px;
-        font-weight: bold;
-        border-radius: 7px;
-        margin: 0 0 0 10px; }
-        .mypage-header .nav .button-area .orange-button:hover {
-          opacity: 0.8; }
+    justify-content: space-between; }
+    .mypage-header .mypage-header-inner .logo {
+      justify-content: flex-end;
+      align-items: flex-start; }
+      .mypage-header .mypage-header-inner .logo a:hover {
+        opacity: 0.7; }
+    .mypage-header .mypage-header-inner .nav {
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end; }
+      .mypage-header .mypage-header-inner .nav .login-area {
+        height: 32px; }
+      .mypage-header .mypage-header-inner .nav .button-area {
+        height: 38px;
+        display: flex; }
+        .mypage-header .mypage-header-inner .nav .button-area .mypage-button {
+          height: 30px;
+          font-weight: bold;
+          border: 1px solid #aaa;
+          border-radius: 7px;
+          background-color: #eee;
+          border-color: #eee;
+          color: orange; }
+          .mypage-header .mypage-header-inner .nav .button-area .mypage-button:hover {
+            opacity: 0.8; }
+        .mypage-header .mypage-header-inner .nav .button-area .orange-button {
+          height: 30px;
+          font-weight: bold;
+          border: 1px solid #aaa;
+          border-radius: 7px;
+          background-color: orange;
+          border-color: orange;
+          color: #fff;
+          margin: 0 0 0 10px; }
+          .mypage-header .mypage-header-inner .nav .button-area .orange-button:hover {
+            opacity: 0.8; }
 
 .mypage-table {
   border-collapse: collapse;
@@ -315,18 +322,15 @@ th, td {
   .mypage-table td:first-child {
     width: 180px;
     background-color: #eee; }
-  .mypage-table td a {
-    color: orange; }
-    .mypage-table td a:hover {
-      text-decoration: underline; }
 
 .confirm-button {
-  background-color: skyblue;
-  border: 1px solid skyblue;
-  color: #fff;
   height: 30px;
   font-weight: bold;
+  border: 1px solid #aaa;
   border-radius: 7px;
+  background-color: skyblue;
+  border-color: skyblue;
+  color: #fff;
   margin: 30px 0; }
   .confirm-button:hover {
     opacity: 0.8; }
@@ -340,8 +344,8 @@ th, td {
 
 .mypage-h3 {
   text-align: left;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.8rem;
+  font-weight: 900;
   color: orange; }
 
 .mypage-text, .cart-table-bottom-text, .cart-button-area .cart-text {
@@ -384,8 +388,6 @@ th, td {
       font-size: 12px;
       padding: 0 10px;
       margin: 20px 0; }
-      .mypage-footer .footer-nav .nav-item a {
-        color: orange; }
     .mypage-footer .footer-nav li + li {
       border-left: 1px dotted #aaa; }
   .mypage-footer .copyright {
@@ -436,6 +438,37 @@ th, td {
   font-size: 0.8rem; }
 
 /* Login */
+.login-form {
+  background-color: #eee;
+  padding: 10px 20px; }
+  .login-form .mypage-text, .login-form .cart-table-bottom-text, .login-form .cart-button-area .cart-text, .cart-button-area .login-form .cart-text {
+    width: 200px; }
+  .login-form .login-button {
+    height: 30px;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    background-color: orange;
+    border-color: orange;
+    color: #fff;
+    padding: 0 30px; }
+    .login-form .login-button:hover {
+      opacity: 0.8; }
+
+.guidance-wrapper .button-area {
+  background-color: #eee;
+  padding: 10px; }
+  .guidance-wrapper .button-area .entry-button {
+    height: 30px;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    background-color: orange;
+    border-color: orange;
+    color: #fff; }
+    .guidance-wrapper .button-area .entry-button:hover {
+      opacity: 0.8; }
+
 /* Cart */
 .cart-table {
   border-collapse: collapse;
@@ -453,21 +486,23 @@ th, td {
   .cart-table .cart-product-manipulation {
     text-align: center; }
     .cart-table .cart-product-manipulation .delete-button {
-      background-color: #555;
-      border: 1px solid #555;
-      color: #fff;
       height: 30px;
       font-weight: bold;
-      border-radius: 7px; }
+      border: 1px solid #aaa;
+      border-radius: 7px;
+      background-color: #555;
+      border-color: #555;
+      color: #fff; }
       .cart-table .cart-product-manipulation .delete-button:hover {
         opacity: 0.8; }
     .cart-table .cart-product-manipulation .later-button {
-      background-color: #eee;
-      border: 1px solid #aaa;
-      color: #333;
       height: 30px;
       font-weight: bold;
+      border: 1px solid #aaa;
       border-radius: 7px;
+      background-color: #eee;
+      border-color: #aaa;
+      color: #333;
       margin: 10px 0 0 0; }
       .cart-table .cart-product-manipulation .later-button:hover {
         opacity: 0.8; }
@@ -492,22 +527,24 @@ th, td {
   .cart-button-area .button-wrapper {
     width: 365px; }
     .cart-button-area .button-wrapper .back-button {
-      background-color: #555;
-      border: 1px solid #555;
-      color: #fff;
       height: 30px;
       font-weight: bold;
+      border: 1px solid #aaa;
       border-radius: 7px;
+      background-color: #555;
+      border-color: #555;
+      color: #fff;
       padding: 0 30px; }
       .cart-button-area .button-wrapper .back-button:hover {
         opacity: 0.8; }
     .cart-button-area .button-wrapper .orange-button {
-      background-color: orange;
-      border: 1px solid orange;
-      color: #fff;
       height: 30px;
       font-weight: bold;
+      border: 1px solid #aaa;
       border-radius: 7px;
+      background-color: orange;
+      border-color: orange;
+      color: #fff;
       margin: 0 0 0 10px; }
       .cart-button-area .button-wrapper .orange-button:hover {
         opacity: 0.8; }
