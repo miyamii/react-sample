@@ -39,7 +39,7 @@ ReactDOM.render(
         <Route path='/mypage/delivery' component={Delivery} />
         <Route path='/mypage/refusal' component={Refusal} />
         <Route path='/mypage/change_card' component={ChangeCard} />
-        <Route path='/mypage/error' component={Error} />
+        <Route path='/error' component={Error} />
         <Route path='/mypage/login' component={Login} />
         <Route path='/mypage' component={Mypage} />
         <Route path='/entry/confirm' component={EntryConfirm} />

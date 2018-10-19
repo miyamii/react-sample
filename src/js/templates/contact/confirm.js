@@ -12,57 +12,39 @@ function ContactConfirmForm(props) {
       <table className="mypage-table" rules="all">
         <tr>
           <td>お名前</td>
-          <td>
-            {props.familyName + props.givenName}
-          </td>
+          <td>{props.familyName + props.givenName}</td>
         </tr>
         <tr>
           <td>お名前(フリガナ)</td>
-          <td>
-            {props.familyNameKana + props.givenNameKana}
-          </td>
+          <td>{props.familyNameKana + props.givenNameKana}</td>
         </tr>
         <tr>
           <td>郵便番号</td>
-          <td>
-            {"〒" + props.postalCode1 + "-" + props.postalCode2}
-          </td>
+          <td>{"〒" + props.postalCode1 + "-" + props.postalCode2}</td>
         </tr>
         <tr>
           <td>住所</td>
-          <td>
-            {props.address1 + props.address2 + props.address3}
-          </td>
+          <td>{props.address1 + props.address2 + props.address3}</td>
         </tr>
         <tr>
           <td>電話番号</td>
-          <td>
-            {props.tel1 + "-" + props.tel2 + "-" + props.tel3}
-          </td>
+          <td>{props.tel1 + "-" + props.tel2 + "-" + props.tel3}</td>
         </tr>
         <tr>
           <td>メールアドレス</td>
-          <td>
-            {props.mail}
-          </td>
+          <td>{props.mail}</td>
         </tr>
         <tr>
           <td>お問い合わせ種別</td>
-          <td>
-            {props.kind}
-          </td>
+          <td>{props.kind}</td>
         </tr>
         <tr>
           <td>ご注文番号</td>
-          <td>
-            {props.orderNumber}
-          </td>
+          <td>{props.orderNumber}</td>
         </tr>
         <tr>
           <td>お問い合わせ内容</td>
-          <td>
-            {props.content}
-          </td>
+          <td>{props.content}</td>
         </tr>
       </table>
       <div className="button-wrapper">

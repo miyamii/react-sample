@@ -13,34 +13,12 @@ function Logo(){
   );
 }
 
-// class HeaderNav extends React.Component {
-//   render () {
-//     return (
-//       <div className="nav">
-//         <form action="/" method="post">
-//           <div className="login-area">
-//           </div>
-//           <div className="login-area">
-          
-//           </div>
-//           {/* ログイン時と非ログイン時でボタンの数が変わる */}
-//           <div className="button-area">
-//             <Link to="/mypage"><Button size="small" className="mypage-button"><i className="fas fa-user fa-lg fa-fw" />マイページ</Button></Link>
-//             {this.props.isLogin ? '' : (<Link to="/entry"><Button size="small" className="orange-button"><i className="fas fa-edit fa-lg fa-fw" />会員登録</Button></Link>)}
-//             <Link to="/cart"><Button size="small" className="orange-button"><i className="fas fa-cart-plus fa-lg fa-fw" />カートの中を見る</Button></Link>
-//           </div>
-//         </form>
-//       </div>
-//     );
-//   }
-// }
-
 function HeaderNav(props) {
   return (
     <div className="nav">
       <form action="/" method="post">
         <div className="login-area">
-        {props.isLogin ? <span className="mypage-text">ようこそ&nbsp;<b>〇〇&nbsp;〇〇様</b>&nbsp;&nbsp;<a className="mypage-text-link" href="#">ログアウト</a></span> : ''}
+        {props.isLogin ? <span className="mypage-text">ようこそ&nbsp;<b>〇〇&nbsp;〇〇様</b>&nbsp;&nbsp;<a className="mypage-text-link" href="#">ログアウト</a></span> : <i className="fas fa-lock fa-lg fa-fw" />}
         </div>
         {/* ログイン時と非ログイン時でボタンの数が変わる */}
         <div className="button-area">
