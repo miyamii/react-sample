@@ -104,7 +104,7 @@ function Refusal() {
       <div className="mypage-container">
         <h3 className="mypage-h3">会員情報削除</h3>
         <p className="">テキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <div className="refusal-card">
+        <div className="refusal-panel">
           <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
           <Button className="submit-button" size="small">手続きを進める</Button>
         </div>
@@ -118,7 +118,7 @@ function RefusalConfirmContent() {
     <div className="mypage-container">
       <h3 className="mypage-h3">会員情報削除(確認)</h3>
       <p className="">テキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <div className="refusal-card">
+      <div className="refusal-panel">
         <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
         <Button className="submit-button" size="small">いいえ、削除しません。</Button>
         <Button className="delete-button" size="small">はい、削除します。</Button>

@@ -419,7 +419,7 @@ th, td {
   padding: 10px 0 0 0;
   color: orange; }
 
-.mypage-text, .cart-table-bottom-text, .cart-button-area .cart-text {
+.mypage-text, .login-form .login-panel-text, .cart-table-bottom-text, .cart-button-area .cart-text {
   font-size: 0.75rem; }
 
 .mypage-list {
@@ -514,8 +514,9 @@ th, td {
 .login-form {
   background-color: #efefef;
   padding: 10px 20px; }
-  .login-form .mypage-text, .login-form .cart-table-bottom-text, .login-form .cart-button-area .cart-text, .cart-button-area .login-form .cart-text {
-    width: 200px; }
+  .login-form .login-panel-text {
+    display: inline-block;
+    width: 150px; }
   .login-form .login-button {
     height: 28px;
     font-weight: bold;
@@ -524,22 +525,27 @@ th, td {
     background-color: orange;
     border-color: orange;
     color: #fff;
-    padding: 0 30px; }
+    display: block;
+    margin: 0 auto;
+    padding: 0 30px;
+    margin: 30px auto; }
     .login-form .login-button:hover {
       opacity: 0.8; }
 
-.guidance-wrapper .button-area {
+.guidance-wrapper .button-panel {
   background-color: #efefef;
   padding: 10px; }
-  .guidance-wrapper .button-area .entry-button {
+  .guidance-wrapper .button-panel .entry-button {
     height: 28px;
     font-weight: bold;
     border: 1px solid #aaa;
     border-radius: 7px;
     background-color: orange;
     border-color: orange;
-    color: #fff; }
-    .guidance-wrapper .button-area .entry-button:hover {
+    color: #fff;
+    display: block;
+    margin: 0 auto; }
+    .guidance-wrapper .button-panel .entry-button:hover {
       opacity: 0.8; }
 
 /* Cart */
@@ -691,7 +697,13 @@ input[name="tab-item"] {
   .delivery-table td .mypage-text-link {
     text-align: center; }
 
-.refusal-card {
+.refusal-panel {
   border: 1px solid #aaa;
   padding: 30px;
+  text-align: center; }
+
+.error-message-panel {
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid #aaa;
   text-align: center; }

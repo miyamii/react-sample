@@ -602,22 +602,27 @@ th, td {
 .login-form {
   background-color: $lightgray;
   padding: 10px 20px;
-  .mypage-text {
-    width: 200px;
+  .login-panel-text {
+    @extend .mypage-text;
+    display: inline-block;
+    width: 150px;
   }
   .login-button {
     @include button-base;
     @include button-color($orange, $orange, $white);
+    @include button-centering;
     padding: 0 30px;
+    margin: 30px auto;
   }
 }
 .guidance-wrapper {
-  .button-area {
+  .button-panel {
     background-color: $lightgray;
     padding: 10px;
     .entry-button {
       @include button-base;
       @include button-color($orange, $orange, $white);
+      @include button-centering;
     }
   }
 }
@@ -765,7 +770,7 @@ input[name="tab-item"] {
   }
 }
 
-.refusal-card{
+.refusal-panel{
   border: 1px solid $gray;
   padding: 30px;
   text-align: center;
@@ -794,3 +799,10 @@ input[name="tab-item"] {
 //       margin: 10px 0 0 0;
 //     }
 //   }
+
+.error-message-panel {
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid $gray;
+  text-align: center;
+}

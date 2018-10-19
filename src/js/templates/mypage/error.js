@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Form, Button } from 'element-react';
+import { Button } from 'element-react';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
 import PageTop from '../../components/mypage/pagetop';
 
-function ErrorArea(props) {
+function ErrorPanel(props) {
   return (
-    <div className="error-message">
+    <div className="error-message-panel">
       <p className="mypage-text">{props.errorMessage}</p>
     </div>
   );
@@ -19,7 +19,7 @@ class Error extends React.Component {
         <Header />
         <div className="container">
           <div className="mypage-list">
-            <ErrorArea errorMesage="メールアドレスもしくはパスワードが正しくありません。" />
+            <ErrorPanel errorMesage="メールアドレスもしくはパスワードが正しくありません。" />
             <Button className="back-button" size="small">戻る</Button>
           </div>
         </div>
