@@ -20,7 +20,7 @@ class Error extends React.Component {
         <div className="container">
           <div className="mypage-list">
             <ErrorArea errorMesage="メールアドレスもしくはパスワードが正しくありません。" />
-            <Button className="negative-button" size="small">戻る</Button>
+            <Button className="back-button" size="small">戻る</Button>
           </div>
         </div>
         <PageTop />

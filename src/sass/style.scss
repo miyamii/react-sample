@@ -378,6 +378,45 @@ th, td {
     text-decoration: underline;
   }
 }
+.normal-button {
+  @include button-base;
+  @include button-color($lightgray, $gray, $black);
+  &:hover {
+    opacity: 0.8;
+    border-color: $gray;
+    color: $black;
+  }
+}
+.back-button {
+  @include button-base;
+  @include button-color($darkgray, $darkgray, $white);
+  padding: 0 30px;
+  &:hover {
+    opacity: 0.8;
+    border-color: $darkgray;
+    color: $white;
+  }
+}
+.submit-button {
+  @include button-base;
+  @include button-color($orange, $orange, $white);
+  @include button-centering;
+  &:hover {
+    opacity: 0.8;
+    border-color: $orange;
+    color: $white;
+  }
+}
+.mini-button {
+  @include mini-button-base;
+  @include button-centering;
+  &:hover {
+    opacity: 0.8;
+    border-color: $gray;
+    color: $black;
+  }
+}
+
 .mypage-header {
   height: 70px;
   position: fixed;
@@ -438,46 +477,11 @@ th, td {
 }
 
 .contact-form {
-
-}
-.normal-button {
-  @include button-base;
-  @include button-color($lightgray, $gray, $black);
-  &:hover {
-    opacity: 0.8;
-    border-color: $gray;
-    color: $black;
+  .normal-button, .submit-button {
+    margin-top: 10px;
   }
-}
-.negative-button {
-  @include button-base;
-  @include button-color($darkgray, $darkgray, $white);
-  @include button-centering;
-  margin-top: 30px;
-  &:hover {
-    opacity: 0.8;
-    border-color: $darkgray;
-    color: $white;
-  }
-}
-.submit-button {
-  @include button-base;
-  @include button-color($orange, $orange, $white);
-  @include button-centering;
-  margin-top: 30px;
-  &:hover {
-    opacity: 0.8;
-    border-color: $orange;
-    color: $white;
-  }
-}
-.mini-button {
-  @include mini-button-base;
-  @include button-centering;
-  &:hover {
-    opacity: 0.8;
-    border-color: $gray;
-    color: $black;
+  .submit-button {
+    margin-top: 30px;
   }
 }
 
@@ -672,9 +676,7 @@ th, td {
     width: 365px;
     @include button-centering;
     .back-button {
-      @include button-base;
-      @include button-color($darkgray, $darkgray, $white);
-      padding: 0 30px;
+      margin: 0;
     }
     .orange-button {
       @include button-base;

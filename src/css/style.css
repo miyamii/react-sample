@@ -272,6 +272,64 @@ th, td {
   .mypage-text-link:hover {
     text-decoration: underline; }
 
+.normal-button {
+  height: 28px;
+  font-weight: bold;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  background-color: #efefef;
+  border-color: #aaa;
+  color: #333; }
+  .normal-button:hover {
+    opacity: 0.8; }
+  .normal-button:hover {
+    opacity: 0.8;
+    border-color: #aaa;
+    color: #333; }
+
+.back-button {
+  height: 28px;
+  font-weight: bold;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  background-color: #555;
+  border-color: #555;
+  color: #fff;
+  padding: 0 30px; }
+  .back-button:hover {
+    opacity: 0.8; }
+  .back-button:hover {
+    opacity: 0.8;
+    border-color: #555;
+    color: #fff; }
+
+.submit-button {
+  height: 28px;
+  font-weight: bold;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  background-color: orange;
+  border-color: orange;
+  color: #fff;
+  display: block;
+  margin: 0 auto; }
+  .submit-button:hover {
+    opacity: 0.8; }
+  .submit-button:hover {
+    opacity: 0.8;
+    border-color: orange;
+    color: #fff; }
+
+.mini-button {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto; }
+  .mini-button:hover {
+    opacity: 0.8;
+    border-color: #aaa;
+    color: #333; }
+
 .mypage-header {
   height: 70px;
   position: fixed;
@@ -341,66 +399,11 @@ th, td {
     width: 180px;
     background-color: #efefef; }
 
-.normal-button {
-  height: 28px;
-  font-weight: bold;
-  border: 1px solid #aaa;
-  border-radius: 7px;
-  background-color: #efefef;
-  border-color: #aaa;
-  color: #333; }
-  .normal-button:hover {
-    opacity: 0.8; }
-  .normal-button:hover {
-    opacity: 0.8;
-    border-color: #aaa;
-    color: #333; }
+.contact-form .normal-button, .contact-form .submit-button {
+  margin-top: 10px; }
 
-.negative-button {
-  height: 28px;
-  font-weight: bold;
-  border: 1px solid #aaa;
-  border-radius: 7px;
-  background-color: #555;
-  border-color: #555;
-  color: #fff;
-  display: block;
-  margin: 0 auto;
+.contact-form .submit-button {
   margin-top: 30px; }
-  .negative-button:hover {
-    opacity: 0.8; }
-  .negative-button:hover {
-    opacity: 0.8;
-    border-color: #555;
-    color: #fff; }
-
-.submit-button {
-  height: 28px;
-  font-weight: bold;
-  border: 1px solid #aaa;
-  border-radius: 7px;
-  background-color: orange;
-  border-color: orange;
-  color: #fff;
-  display: block;
-  margin: 0 auto;
-  margin-top: 30px; }
-  .submit-button:hover {
-    opacity: 0.8; }
-  .submit-button:hover {
-    opacity: 0.8;
-    border-color: orange;
-    color: #fff; }
-
-.mini-button {
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto; }
-  .mini-button:hover {
-    opacity: 0.8;
-    border-color: #aaa;
-    color: #333; }
 
 .mypage-h2 {
   padding: 5px 10px;
@@ -601,16 +604,7 @@ th, td {
     display: block;
     margin: 0 auto; }
     .cart-button-area .button-wrapper .back-button {
-      height: 28px;
-      font-weight: bold;
-      border: 1px solid #aaa;
-      border-radius: 7px;
-      background-color: #555;
-      border-color: #555;
-      color: #fff;
-      padding: 0 30px; }
-      .cart-button-area .button-wrapper .back-button:hover {
-        opacity: 0.8; }
+      margin: 0; }
     .cart-button-area .button-wrapper .orange-button {
       height: 28px;
       font-weight: bold;

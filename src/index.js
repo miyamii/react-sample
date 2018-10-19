@@ -23,28 +23,36 @@ import Faq from './js/templates/faq';
 import Archives from './js/templates/archives';
 import * as serviceWorker from './serviceWorker';
 
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+};
+
 ReactDOM.render(
   <BrowserRouter>
-    <Switch>
-      <Route exact path='/' component={Index} />
-      <Route path='/cart' component={Cart} />
-      <Route path='/mypage/change' component={Change} />
-      <Route path='/mypage/delivery' component={Delivery} />
-      <Route path='/mypage/refusal' component={Refusal} />
-      <Route path='/mypage/change_card' component={ChangeCard} />
-      <Route path='/mypage/error' component={Error} />
-      <Route path='/mypage/login' component={Login} />
-      <Route path='/mypage' component={Mypage} />
-      <Route path='/entry/confirm' component={EntryConfirm} />
-      <Route path='/entry' component={Entry} />
-      <Route path='/contact/confirm' component={ContactConfirm} />
-      <Route path='/contact' component={Contact} />
-      <Route path='/privacy' component={Privacy} />
-      <Route path='/notice' component={Notice} />
-      <Route path='/order' component={Order} />
-      <Route path='/faq' component={Faq} />
-      <Route path='/archives' component={Archives} />
-    </Switch>
+    <React.Fragment>
+      <Route component={ScrollToTop} />
+      <Switch>
+        <Route exact path='/' component={Index} />
+        <Route path='/cart' component={Cart} />
+        <Route path='/mypage/change' component={Change} />
+        <Route path='/mypage/delivery' component={Delivery} />
+        <Route path='/mypage/refusal' component={Refusal} />
+        <Route path='/mypage/change_card' component={ChangeCard} />
+        <Route path='/mypage/error' component={Error} />
+        <Route path='/mypage/login' component={Login} />
+        <Route path='/mypage' component={Mypage} />
+        <Route path='/entry/confirm' component={EntryConfirm} />
+        <Route path='/entry' component={Entry} />
+        <Route path='/contact/confirm' component={ContactConfirm} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/privacy' component={Privacy} />
+        <Route path='/notice' component={Notice} />
+        <Route path='/order' component={Order} />
+        <Route path='/faq' component={Faq} />
+        <Route path='/archives' component={Archives} />
+      </Switch>
+    </React.Fragment>
     {/*
     <Route path="/news/:id" component={} /> */}
   </BrowserRouter>

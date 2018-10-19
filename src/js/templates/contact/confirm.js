@@ -1,56 +1,75 @@
 import React, { Component } from 'react';
+import { Form, Button } from 'element-react';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
 import PageTop from '../../components/mypage/pagetop';
 import SectionTitle from '../../components/mypage/section_title';
 
-function ContactConfirmTable() {
+function ContactConfirmForm(props) {
   return (
-    <table className="mypage-table" rules="all">
-      <tr>
-        <td>販売業者</td>
-        <td>株式会社〇〇〇〇</td>
-      </tr>
-      <tr>
-        <td>運営責任者</td>
-        <td>〇〇〇〇</td>
-      </tr>
-      <tr>
-        <td>住所</td>
-        <td>
-           〒〇〇〇-〇〇〇<br />
-           福岡県福岡市〇〇区〇〇町
-        </td>
-      </tr>
-      <tr>
-        <td>電話番号</td>
-        <td>〇〇〇-〇〇〇-〇〇〇〇</td>
-      </tr>
-      <tr>
-        <td>メールアドレス</td>
-        <td><a href="#" className="mypage-text-link">info@sample.co.jp</a></td>
-      </tr>
-      <tr>
-        <td>URL</td>
-        <td><a href="#" className="mypage-text-link">https://sample.com</a></td>
-      </tr>
-      <tr>
-        <td>備考1</td>
-        <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
-      </tr>
-      <tr>
-        <td>備考2</td>
-        <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
-      </tr>
-      <tr>
-        <td>備考3</td>
-        <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
-      </tr>
-      <tr>
-        <td>備考4</td>
-        <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
-      </tr>
-    </table>
+    <Form className="contact-form" action="#" method="post">
+      <p className="mypage-text">テキストが入ります。</p>
+      <table className="mypage-table" rules="all">
+        <tr>
+          <td>お名前</td>
+          <td>
+            {props.familyName + props.givenName}
+          </td>
+        </tr>
+        <tr>
+          <td>お名前(フリガナ)</td>
+          <td>
+            {props.familyNameKana + props.givenNameKana}
+          </td>
+        </tr>
+        <tr>
+          <td>郵便番号</td>
+          <td>
+            {"〒" + props.postalCode1 + "-" + props.postalCode2}
+          </td>
+        </tr>
+        <tr>
+          <td>住所</td>
+          <td>
+            {props.address1 + props.address2 + props.address3}
+          </td>
+        </tr>
+        <tr>
+          <td>電話番号</td>
+          <td>
+            {props.tel1 + "-" + props.tel2 + "-" + props.tel3}
+          </td>
+        </tr>
+        <tr>
+          <td>メールアドレス</td>
+          <td>
+            {props.mail}
+          </td>
+        </tr>
+        <tr>
+          <td>お問い合わせ種別</td>
+          <td>
+            {props.kind}
+          </td>
+        </tr>
+        <tr>
+          <td>ご注文番号</td>
+          <td>
+            {props.orderNumber}
+          </td>
+        </tr>
+        <tr>
+          <td>お問い合わせ内容</td>
+          <td>
+            {props.content}
+          </td>
+        </tr>
+      </table>
+      <div className="button-wrapper">
+        <Button className="back-button" size="small" nativeType="button">戻る</Button>
+        <Button className="submit-button" size="small" nativeType="submit">送信</Button>
+      </div>
+    </Form>
   );
 }
 
@@ -63,7 +82,7 @@ class ContactConfirm extends React.Component {
           <ul className="mypage-list">
             <li className="mypage-list-item">
               <SectionTitle title="お問い合わせ内容確認"/>
-              <ContactConfirmTable />
+              <ContactConfirmForm mail="sample@info.com"/>
             </li>
           </ul>
         </div>

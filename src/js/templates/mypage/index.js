@@ -121,7 +121,7 @@ function RefusalConfirmContent() {
       <div className="refusal-card">
         <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
         <Button className="submit-button" size="small">いいえ、削除しません。</Button>
-        <Button className="negative-button" size="small">はい、削除します。</Button>
+        <Button className="delete-button" size="small">はい、削除します。</Button>
       </div>
     </div>
   );
