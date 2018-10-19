@@ -17,7 +17,7 @@ class Faq extends React.Component {
             <li className="common-list-item">
               <SectionTitle title="分類1"/>
               <FaqItem question="質問文です" answer="テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト"/>
-              <FaqItem question="質問" answer="回答"/>
+              <FaqItem question="質問" answer={<a href="#" className="common-text-link">リンクテストです</a>}/>
               <FaqItem question="質問" answer="回答"/>
               <FaqItem question="質問" answer="回答"/>
             </li>

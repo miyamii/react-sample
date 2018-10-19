@@ -43,6 +43,9 @@ th, td {
     height: 7px;
     background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px); }
 
+.text-link, .common-text-link, .mypage-text-link {
+  color: orange; }
+
 /* Common共通 */
 .common-header {
   width: 1000px;
@@ -72,7 +75,7 @@ th, td {
 .common-footer {
   height: 100px;
   grid-column: 1 / 2;
-  background-color: #eee; }
+  background-color: #efefef; }
   .common-footer .footer-nav {
     width: 400px;
     display: flex;
@@ -111,7 +114,7 @@ th, td {
   padding: 50px 0;
   text-align: center;
   font-size: 24px;
-  background-color: #eee;
+  background-color: #efefef;
   display: block; }
 
 .bg-white {
@@ -126,6 +129,9 @@ th, td {
     text-align: left; }
   .common-list-item .text {
     font-size: 14px; }
+
+.common-text-link {
+  text-decoration: underline; }
 
 /* Top */
 .top {
@@ -169,7 +175,7 @@ th, td {
       .product-items li .product-card h4 {
         margin: 0; }
       .product-items li .product-card .product-expired {
-        background-color: #eee;
+        background-color: #efefef;
         width: 280px;
         height: 20px;
         text-align: center;
@@ -185,17 +191,17 @@ th, td {
   width: 1000px;
   height: 50px;
   font-size: 1rem;
-  background-color: #eee;
+  background-color: #efefef;
   border-color: #aaa;
   color: #333;
-  margin: -30px 0 100px; }
+  margin: -30px 0 80px; }
   .product-list-button:hover {
     background-color: #90EE90;
     border-color: #90EE90;
     color: #fff; }
 
 .news {
-  background-color: #eee;
+  background-color: #efefef;
   height: 500px; }
   .news .news-title {
     padding: 30px 0; }
@@ -262,7 +268,7 @@ th, td {
 
 /* Mypage */
 .mypage-text-link {
-  color: orange; }
+  font-weight: bold; }
   .mypage-text-link:hover {
     text-decoration: underline; }
 
@@ -292,22 +298,26 @@ th, td {
       justify-content: flex-end;
       align-items: flex-end; }
       .mypage-header .mypage-header-inner .nav .login-area {
-        height: 32px; }
+        background-color: #efefef;
+        border: 1px solid #ccc;
+        margin: 4px 0;
+        text-align: center;
+        padding: 4px 0; }
       .mypage-header .mypage-header-inner .nav .button-area {
-        height: 38px;
+        height: 34px;
         display: flex; }
         .mypage-header .mypage-header-inner .nav .button-area .mypage-button {
-          height: 30px;
+          height: 28px;
           font-weight: bold;
           border: 1px solid #aaa;
           border-radius: 7px;
-          background-color: #eee;
-          border-color: #eee;
+          background-color: #efefef;
+          border-color: #efefef;
           color: orange; }
           .mypage-header .mypage-header-inner .nav .button-area .mypage-button:hover {
             opacity: 0.8; }
         .mypage-header .mypage-header-inner .nav .button-area .orange-button {
-          height: 30px;
+          height: 28px;
           font-weight: bold;
           border: 1px solid #aaa;
           border-radius: 7px;
@@ -323,38 +333,79 @@ th, td {
   border: 1px solid #ccc;
   width: 1000px;
   margin: 0 auto;
-  font-size: 0.75rem; }
+  font-size: 0.75rem;
+  border-color: #ccc; }
+  .mypage-table th {
+    background-color: #efefef; }
   .mypage-table td:first-child {
     width: 180px;
-    background-color: #eee; }
+    background-color: #efefef; }
 
 .normal-button {
-  height: 30px;
+  height: 28px;
   font-weight: bold;
   border: 1px solid #aaa;
   border-radius: 7px;
-  background-color: #eee;
+  background-color: #efefef;
   border-color: #aaa;
   color: #333; }
   .normal-button:hover {
     opacity: 0.8; }
+  .normal-button:hover {
+    opacity: 0.8;
+    border-color: #aaa;
+    color: #333; }
 
-.confirm-button {
-  height: 30px;
+.negative-button {
+  height: 28px;
   font-weight: bold;
   border: 1px solid #aaa;
   border-radius: 7px;
-  background-color: skyblue;
-  border-color: skyblue;
+  background-color: #555;
+  border-color: #555;
   color: #fff;
-  margin: 30px 0; }
-  .confirm-button:hover {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px; }
+  .negative-button:hover {
     opacity: 0.8; }
+  .negative-button:hover {
+    opacity: 0.8;
+    border-color: #555;
+    color: #fff; }
+
+.submit-button {
+  height: 28px;
+  font-weight: bold;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  background-color: orange;
+  border-color: orange;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px; }
+  .submit-button:hover {
+    opacity: 0.8; }
+  .submit-button:hover {
+    opacity: 0.8;
+    border-color: orange;
+    color: #fff; }
+
+.mini-button {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto; }
+  .mini-button:hover {
+    opacity: 0.8;
+    border-color: #aaa;
+    color: #333; }
 
 .mypage-h2 {
   padding: 5px 10px;
   border-left: 5px solid orange;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #efefef;
   text-align: left;
   font-size: 1.25rem; }
 
@@ -362,6 +413,7 @@ th, td {
   text-align: left;
   font-size: 0.8rem;
   font-weight: 900;
+  padding: 10px 0 0 0;
   color: orange; }
 
 .mypage-text, .cart-table-bottom-text, .cart-button-area .cart-text {
@@ -417,15 +469,19 @@ th, td {
   font-size: 12px; }
 
 .input-short {
-  width: 80px; }
+  padding: 5px 0;
+  width: 60px; }
 
 .input-middle {
-  width: 160px; }
+  padding: 5px 0;
+  width: 120px; }
 
 .input-long {
-  width: 400px; }
+  padding: 5px 0;
+  width: 350px; }
 
 .select {
+  padding: 5px 0;
   width: 200px; }
 
 .select-number {
@@ -433,10 +489,8 @@ th, td {
 
 .attention, .cart-attention {
   color: red;
-  font-size: 0.7rem; }
-
-.button-wrapper {
-  margin: 0 auto; }
+  font-size: 0.7rem;
+  margin: 0; }
 
 /* Faq */
 .faq-item h3 {
@@ -455,12 +509,12 @@ th, td {
 
 /* Login */
 .login-form {
-  background-color: #eee;
+  background-color: #efefef;
   padding: 10px 20px; }
   .login-form .mypage-text, .login-form .cart-table-bottom-text, .login-form .cart-button-area .cart-text, .cart-button-area .login-form .cart-text {
     width: 200px; }
   .login-form .login-button {
-    height: 30px;
+    height: 28px;
     font-weight: bold;
     border: 1px solid #aaa;
     border-radius: 7px;
@@ -472,10 +526,10 @@ th, td {
       opacity: 0.8; }
 
 .guidance-wrapper .button-area {
-  background-color: #eee;
+  background-color: #efefef;
   padding: 10px; }
   .guidance-wrapper .button-area .entry-button {
-    height: 30px;
+    height: 28px;
     font-weight: bold;
     border: 1px solid #aaa;
     border-radius: 7px;
@@ -491,18 +545,20 @@ th, td {
   border: 1px solid #ccc;
   width: 1000px;
   margin: 0 auto;
-  font-size: 0.75rem; }
+  font-size: 0.75rem;
+  border-color: #ccc; }
   .cart-table th {
-    background-color: #eee;
+    background-color: #efefef; }
+  .cart-table th {
     text-align: center; }
   .cart-table .cart-product-total {
     text-align: right; }
     .cart-table .cart-product-total td:first-child {
-      background-color: #eee; }
+      background-color: #efefef; }
   .cart-table .cart-product-manipulation {
     text-align: center; }
     .cart-table .cart-product-manipulation .delete-button {
-      height: 30px;
+      height: 28px;
       font-weight: bold;
       border: 1px solid #aaa;
       border-radius: 7px;
@@ -512,11 +568,11 @@ th, td {
       .cart-table .cart-product-manipulation .delete-button:hover {
         opacity: 0.8; }
     .cart-table .cart-product-manipulation .later-button {
-      height: 30px;
+      height: 28px;
       font-weight: bold;
       border: 1px solid #aaa;
       border-radius: 7px;
-      background-color: #eee;
+      background-color: #efefef;
       border-color: #aaa;
       color: #333;
       margin: 10px 0 0 0; }
@@ -541,9 +597,11 @@ th, td {
   .cart-button-area .cart-text {
     text-align: center; }
   .cart-button-area .button-wrapper {
-    width: 365px; }
+    width: 365px;
+    display: block;
+    margin: 0 auto; }
     .cart-button-area .button-wrapper .back-button {
-      height: 30px;
+      height: 28px;
       font-weight: bold;
       border: 1px solid #aaa;
       border-radius: 7px;
@@ -554,7 +612,7 @@ th, td {
       .cart-button-area .button-wrapper .back-button:hover {
         opacity: 0.8; }
     .cart-button-area .button-wrapper .orange-button {
-      height: 30px;
+      height: 28px;
       font-weight: bold;
       border: 1px solid #aaa;
       border-radius: 7px;
@@ -623,3 +681,23 @@ input[name="tab-item"] {
   border-bottom: 1px solid #fff;
   border-left: 1px solid #aaa;
   border-right: 1px solid #aaa; }
+
+.delivery-table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  border-color: #ccc; }
+  .delivery-table th {
+    background-color: #efefef; }
+  .delivery-table th {
+    text-align: left;
+    font-weight: normal; }
+  .delivery-table td .mypage-text-link {
+    text-align: center; }
+
+.refusal-card {
+  border: 1px solid #aaa;
+  padding: 30px;
+  text-align: center; }

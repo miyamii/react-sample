@@ -4,10 +4,11 @@ $orange: orange;
 $green: #90EE90;
 $blue: skyblue;
 $white: #fff;
-$lightgray: #eee;
+$lightgray: #efefef;
 $gray: #aaa;
 $darkgray: #555;
 $black: #333;
+$linkColor: $orange;
 
 body {
   color: $black;
@@ -61,8 +62,12 @@ th, td {
   color: $white;
   background-color: $color;
 }
+@mixin mini-button-base {
+  border: 1px solid $gray;
+  border-radius: 5px;
+}
 @mixin button-base {
-  height: 30px;
+  height: 28px;
   font-weight: bold;
   border: 1px solid $gray;
   border-radius: 7px;
@@ -70,15 +75,20 @@ th, td {
     opacity: 0.8;
   }
 }
+@mixin large-button-base {
+  width: 1000px;
+  height: 50px;
+  font-size: 1rem;
+}
 @mixin button-color($bgColor, $borderColor, $fontColor) {
   background-color: $bgColor;
   border-color: $borderColor;
   color: $fontColor;
 }
-@mixin large-button-base {
-  width: 1000px;
-  height: 50px;
-  font-size: 1rem;
+
+@mixin button-centering {
+  display: block;
+  margin: 0 auto;
 }
 
 @mixin table-base {
@@ -87,6 +97,17 @@ th, td {
   width: 1000px;
   margin: 0 auto;
   font-size: 0.75rem;
+}
+
+@mixin table-color($thColor: $lightgray, $borderColor: #ccc) {
+  border-color: $borderColor;
+  th {
+    background-color: $thColor;
+  }
+}
+
+@mixin table-form-padding {
+  padding: 5px 0;
 }
 
 .stripe {
@@ -101,6 +122,10 @@ th, td {
     height: 7px;
     background: repeating-linear-gradient(-45deg, $blue, $blue 2px, white 2px, white 4px);
   }
+}
+
+.text-link {
+  color: $linkColor;
 }
 
 /* Common共通 */
@@ -165,7 +190,7 @@ th, td {
   right: 0;
   margin: 0  20px 20px 0;
   .icon-orange {
-    color: $orange;
+    color: $linkColor;
   }
 }
 
@@ -201,6 +226,11 @@ th, td {
   .text {
     font-size: 14px;
   }
+}
+
+.common-text-link {
+  @extend .text-link;
+  text-decoration:  underline;
 }
 
 /* Top */
@@ -318,7 +348,7 @@ th, td {
         margin: 0;
       }
       i {
-        color: $orange;
+        color: $linkColor;
       }
     }
     .info-text {
@@ -342,7 +372,8 @@ th, td {
 
 /* Mypage */
 .mypage-text-link {
-  color: $orange;
+  @extend .text-link;
+  font-weight: bold;
   &:hover {
     text-decoration: underline;
   }
@@ -373,10 +404,14 @@ th, td {
       justify-content: flex-end;
       align-items: flex-end;
       .login-area {
-        height: 32px;
+        background-color: $lightgray;
+        border: 1px solid #ccc;
+        margin: 4px 0;
+        text-align: center;
+        padding: 4px 0;
       }
       .button-area {
-        height: 38px;
+        height: 34px;
         display: flex;
         .mypage-button{
           @include button-base;
@@ -393,6 +428,7 @@ th, td {
 }
 .mypage-table {
   @include table-base;
+  @include table-color();
   td{
     &:first-child {
       width: 180px;
@@ -400,14 +436,49 @@ th, td {
     }
   }
 }
+
+.contact-form {
+
+}
 .normal-button {
   @include button-base;
   @include button-color($lightgray, $gray, $black);
+  &:hover {
+    opacity: 0.8;
+    border-color: $gray;
+    color: $black;
+  }
 }
-.confirm-button {
+.negative-button {
   @include button-base;
-  @include button-color($blue, $blue, $white);
-  margin: 30px 0;
+  @include button-color($darkgray, $darkgray, $white);
+  @include button-centering;
+  margin-top: 30px;
+  &:hover {
+    opacity: 0.8;
+    border-color: $darkgray;
+    color: $white;
+  }
+}
+.submit-button {
+  @include button-base;
+  @include button-color($orange, $orange, $white);
+  @include button-centering;
+  margin-top: 30px;
+  &:hover {
+    opacity: 0.8;
+    border-color: $orange;
+    color: $white;
+  }
+}
+.mini-button {
+  @include mini-button-base;
+  @include button-centering;
+  &:hover {
+    opacity: 0.8;
+    border-color: $gray;
+    color: $black;
+  }
 }
 
 .mypage-h2 {
@@ -421,6 +492,7 @@ th, td {
   text-align: left;
   font-size: 0.8rem;
   font-weight: 900;
+  padding: 10px 0 0 0;
   color: $orange;
 }
 .mypage-text {
@@ -479,15 +551,19 @@ th, td {
   font-size: 12px;
 }
 .input-short {
-  width: 80px;
+  @include table-form-padding;
+  width: 60px;
 }
 .input-middle {
-  width: 160px;
+  @include table-form-padding;
+  width: 120px;
 }
 .input-long {
-  width: 400px;
+  @include table-form-padding;
+  width: 350px;
 }
 .select {
+  @include table-form-padding;
   width: 200px;
 }
 .select-number {
@@ -496,9 +572,7 @@ th, td {
 .attention {
   color: $red;
   font-size: 0.7rem;
-}
-.button-wrapper {
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* Faq */
@@ -547,8 +621,8 @@ th, td {
 /* Cart */
 .cart-table {
   @include table-base;
+  @include table-color();
   th {
-    background-color: $lightgray;
     text-align: center;
   }
   .cart-product-total {
@@ -596,6 +670,7 @@ th, td {
   }
   .button-wrapper {
     width: 365px;
+    @include button-centering;
     .back-button {
       @include button-base;
       @include button-color($darkgray, $darkgray, $white);
@@ -673,3 +748,47 @@ input[name="tab-item"] {
   border-left: 1px solid $gray;
   border-right: 1px solid $gray;
 }
+
+.delivery-table {
+  @include table-base;
+  @include table-color();
+  th {
+    text-align: left;
+    font-weight: normal;
+  }
+  td {
+    .mypage-text-link {
+      text-align: center;
+    }
+  }
+}
+
+.refusal-card{
+  border: 1px solid $gray;
+  padding: 30px;
+  text-align: center;
+}
+// .cart-table {
+//   @include table-base;
+//   th {
+//     background-color: $lightgray;
+//     text-align: center;
+//   }
+//   .cart-product-total {
+//     text-align: right;
+//     td:first-child {
+//       background-color: $lightgray;
+//     }
+//   }
+//   .cart-product-manipulation {
+//     text-align: center;
+//     .delete-button {
+//       @include button-base;
+//       @include button-color($darkgray, $darkgray, $white);
+//     }
+//     .later-button {
+//       @include button-base;
+//       @include button-color($lightgray, $gray, $black);
+//       margin: 10px 0 0 0;
+//     }
+//   }

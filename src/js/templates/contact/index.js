@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Form, Input, Select, Button } from 'element-react';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
 import PageTop from '../../components/mypage/pagetop';
-import { Form, Input, Select, Button } from 'element-react';
 import SectionTitle from '../../components/mypage/section_title';
 
 function ContactForm() {
@@ -14,14 +14,14 @@ function ContactForm() {
           <td>お名前<span className="required">※</span></td>
           <td>
             姓&nbsp;<Input className="input-middle" minLength="1" size="mini" name="family-name"/>
-            &nbsp;&nbsp;名&nbsp;<Input className="input-middle" minLength="1" size="mini" name="given-name"/>
+            &nbsp;名&nbsp;<Input className="input-middle" minLength="1" size="mini" name="given-name"/>
           </td>
         </tr>
         <tr>
           <td>お名前(フリガナ)<span className="required">※</span></td>
           <td>
             セイ&nbsp;<Input className="input-middle" size="mini" name="family-name-kana"/>
-            &nbsp;&nbsp;メイ&nbsp;<Input className="input-middle" size="mini" name="given-name-kana"/>
+            &nbsp;メイ&nbsp;<Input className="input-middle" size="mini" name="given-name-kana"/>
           </td>
         </tr>
         <tr>
@@ -77,20 +77,20 @@ function ContactForm() {
         <tr>
           <td>ご注文番号</td>
           <td>
-            <Input type="number" size="mini" name="order-number"/>
+            <Input className="input-long" size="mini" name="order-number"/>
           </td>
         </tr>
         <tr>
           <td>お問い合わせ内容<span className="required">※</span><br/>
            (全角1000字以内)</td>
           <td>
-            <Input type="textarea" name="content"/>
+            <Input className="input-long" type="textarea" name="content" rows="14"/>
             <p className="attention">赤字テキスト赤字テキスト赤字テキスト</p>
           </td>
         </tr>
       </table>
       <div className="button-wrapper">
-        <Button className="confirm-button" size="small" nativeType="submit">確認ページへ</Button>
+        <Button className="submit-button" size="small" nativeType="submit">確認ページへ</Button>
       </div>
     </Form>
   );

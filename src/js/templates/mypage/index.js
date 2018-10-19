@@ -59,15 +59,42 @@ function Change() {
   );
 }
 
-function Delivery() {
+function Delivery(props) {
   return (
     <div className="tab-content delivery-content">
       <div className="mypage-container">
         <h3 className="mypage-h3">お届け先追加・削除</h3>
         <p className="mypage-text">テキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />
         <span className="attention">※ テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span></p>
+        <Button className="normal-button"size="small">新しいお届け先を追加する</Button>
+        {props.deliveryIndex === 0 ? <p className="mypage-text"><b>新しいお届け先はありません。</b></p> : <DeliveryTable />}
       </div>
     </div>
+  );
+}
+
+function DeliveryTable() {
+  return (
+    <form action="/" method="">
+      <table className="delivery-table" rules="all">
+        <tr>
+          <th colspan="5">お届け先</th>
+        </tr>
+        <DeliveryTableRow />
+      </table>
+    </form>
+  );
+}
+
+function DeliveryTableRow() {
+  return (
+    <tr className="cart-product-manipulation">
+      <td>1</td>
+      <td>お届け先住所</td>
+      <td>〒〇〇〇-〇〇〇〇<br />住所が入ります。</td>
+      <td><a className="mypage-text-link" href="javascript:void(0);" onClick="return false;">変更</a></td>
+      <td><a className="mypage-text-link" href="javascript:void(0);" onClick="return false;">削除</a></td>
+    </tr>
   );
 }
 
@@ -77,6 +104,24 @@ function Refusal() {
       <div className="mypage-container">
         <h3 className="mypage-h3">会員情報削除</h3>
         <p className="">テキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <div className="refusal-card">
+          <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <Button className="submit-button" size="small">手続きを進める</Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function RefusalConfirmContent() {
+  return (
+    <div className="mypage-container">
+      <h3 className="mypage-h3">会員情報削除(確認)</h3>
+      <p className="">テキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      <div className="refusal-card">
+        <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <Button className="submit-button" size="small">いいえ、削除しません。</Button>
+        <Button className="negative-button" size="small">はい、削除します。</Button>
       </div>
     </div>
   );
@@ -90,6 +135,14 @@ function ChangeCard() {
         <h3 className="mypage-h3">現在登録されているカード情報</h3>
         <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
         <Button className="mini-button" size="mini" nativeType="submit">情報を削除</Button>
+
+        <h3 className="mypage-h3">新規カード情報登録</h3>
+       <form>
+        <table　className="card-">
+
+        </table>
+        </form>
+        <Button className="mini-button" size="mini" nativeType="submit">カード情報を登録</Button>
       </div>
     </div>
   );
@@ -103,20 +156,20 @@ function ChangeForm() {
           <td>お名前<span className="required">※</span></td>
           <td>
             姓&nbsp;<Input className="input-middle" minLength="1" size="mini" name="family-name"/>
-            &nbsp;&nbsp;名&nbsp;<Input className="input-middle" minLength="1" size="mini" name="given-name"/>
+            &nbsp;名&nbsp;<Input className="input-middle" minLength="1" size="mini" name="given-name"/>
           </td>
         </tr>
         <tr>
           <td>お名前(フリガナ)<span className="required">※</span></td>
           <td>
             セイ&nbsp;<Input className="input-middle" size="mini" name="family-name-kana"/>
-            &nbsp;&nbsp;メイ&nbsp;<Input className="input-middle" size="mini" name="given-name-kana"/>
+            &nbsp;メイ&nbsp;<Input className="input-middle" size="mini" name="given-name-kana"/>
           </td>
         </tr>
         <tr>
           <td>会社名<span className="required">※</span></td>
           <td>
-            <Input className="input-middle" size="mini" name="company-name"/>
+            <Input className="input-long" size="mini" name="company-name"/>
           </td>
         </tr>
         <tr>
@@ -159,19 +212,9 @@ function ChangeForm() {
             <p  className="attention">赤字テキスト赤字テキスト</p>
           </td>
         </tr>
-        <tr>
-          <td>お問い合わせ種別<span className="required">※</span></td>
-          <td>
-            <Select className="select" name="kind" placeholder="種別を選択してください。" size="mini">
-              <Select.Option value="その1">その1</Select.Option>
-              <Select.Option value="その2">その2</Select.Option>
-              <Select.Option value="その3">その3</Select.Option>
-            </Select>
-          </td>
-        </tr>
       </table>
       <div className="button-wrapper">
-        <Button className="orange-button" size="small" nativeType="submit">変更内容の確認</Button>
+        <Button className="submit-button" size="small" nativeType="submit">変更内容の確認</Button>
       </div>
     </Form>
   );

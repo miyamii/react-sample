@@ -11,7 +11,7 @@ import Delivery from './js/templates/mypage/delivery';
 import Refusal from './js/templates/mypage/refusal';
 import ChangeCard from './js/templates/mypage/change_card';
 import Login from './js/templates/mypage/login';
-import LoginError from './js/templates/mypage/login_error';
+import Error from './js/templates/mypage/error';
 import Entry from './js/templates/entry/index';
 import EntryConfirm from './js/templates/entry/confirm';
 import Contact from './js/templates/contact/index';
@@ -32,7 +32,7 @@ ReactDOM.render(
       <Route path='/mypage/delivery' component={Delivery} />
       <Route path='/mypage/refusal' component={Refusal} />
       <Route path='/mypage/change_card' component={ChangeCard} />
-      <Route path='/mypage/login/error' component={LoginError} />
+      <Route path='/mypage/error' component={Error} />
       <Route path='/mypage/login' component={Login} />
       <Route path='/mypage' component={Mypage} />
       <Route path='/entry/confirm' component={EntryConfirm} />
