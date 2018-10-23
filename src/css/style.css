@@ -499,6 +499,21 @@ th, td {
   font-size: 0.7rem;
   margin: 0; }
 
+/* Entry */
+.entry-confirm .button-wrapper {
+  margin: 30px auto 0 auto;
+  width: 200px; }
+  .entry-confirm .button-wrapper .back-button, .entry-confirm .button-wrapper .submit-button {
+    display: inline; }
+
+/* Contact */
+.contact-confirm .button-wrapper {
+  margin: 30px auto 0 auto;
+  width: 200px; }
+  .contact-confirm .button-wrapper .back-button, .contact-confirm .button-wrapper .submit-button {
+    display: inline;
+    padding: 0 40px; }
+
 /* Faq */
 .faq-item h3 {
   background-image: url("https://placehold.jp/40x40.png?text=Q");
