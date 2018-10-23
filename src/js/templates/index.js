@@ -42,7 +42,7 @@ function Product() {
         <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム4" labelKind="new" labelText="NEW" title="タイトル4" expired="2018.10.13" />
         <ProductItem url="/" imgSrc="https://placehold.jp/300x200.png" imgAlt="アイテム5" labelKind="new" labelText="NEW" title="タイトル5" expired="2018.10.15" />
       </ul>
-      <Link to="/archives"><button className="product-list-button" onclick="location.href='/archives'">アーカイブ一覧へ<i className="fas fa-caret-right fa-lg fa-fw"/ ></button></Link>
+      <Link to="/archives"><button className="product-list-button">アーカイブ一覧へ<i className="fas fa-caret-right fa-lg fa-fw"/ ></button></Link>
     </section>
   );
 }

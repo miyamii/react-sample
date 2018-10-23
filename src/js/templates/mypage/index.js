@@ -150,7 +150,7 @@ function ChangeCard() {
 
 function ChangeForm() {
   return (
-    <Form className="contact-form" action="#" method="post">
+    <Form className="form-input" action="#" method="post">
       <table className="mypage-table" rules="all">
         <tr>
           <td>お名前<span className="required">※</span></td>

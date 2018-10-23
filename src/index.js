@@ -14,6 +14,7 @@ import Login from './js/templates/mypage/login';
 import Error from './js/templates/mypage/error';
 import Entry from './js/templates/entry/index';
 import EntryConfirm from './js/templates/entry/confirm';
+import EntryComplete from './js/templates/entry/complete';
 import Contact from './js/templates/contact/index';
 import ContactConfirm from './js/templates/contact/confirm';
 import Privacy from './js/templates/privacy';
@@ -42,6 +43,7 @@ ReactDOM.render(
         <Route path='/error' component={Error} />
         <Route path='/mypage/login' component={Login} />
         <Route path='/mypage' component={Mypage} />
+        <Route path='/entry/complete' component={EntryComplete} />
         <Route path='/entry/confirm' component={EntryConfirm} />
         <Route path='/entry' component={Entry} />
         <Route path='/contact/confirm' component={ContactConfirm} />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'element-react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
 import PageTop from '../../components/mypage/pagetop';
@@ -20,7 +21,7 @@ class Error extends React.Component {
         <div className="container">
           <div className="error mypage-list">
             <ErrorPanel errorMessage="メールアドレスもしくはパスワードが正しくありません。" />
-            <Button className="back-button" size="small">戻る</Button>
+            <Link to="/mypage/login"><Button className="back-button" size="small">戻る</Button></Link>
           </div>
         </div>
         <PageTop />

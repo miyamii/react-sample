@@ -7,7 +7,7 @@ import SectionTitle from '../../components/mypage/section_title';
 
 function ContactForm() {
   return (
-    <Form className="contact-form" action="#" method="post">
+    <Form className="form-input" action="#" method="post">
       <p className="mypage-text">テキストが入ります。</p>
       <table className="mypage-table" rules="all">
         <tr>

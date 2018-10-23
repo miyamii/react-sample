@@ -371,6 +371,13 @@ th, td {
 }
 
 /* Mypage */
+.mypage-text {
+  font-size: 0.75rem;
+}
+.mypage-text-bold {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
 .mypage-text-link {
   @extend .text-link;
   font-weight: bold;
@@ -474,9 +481,12 @@ th, td {
       background-color: $lightgray;
     }
   }
+  span {
+    @extend .mypage-text;
+  }
 }
 
-.contact-form {
+.form-input {
   .normal-button, .submit-button {
     margin-top: 10px;
   }
@@ -499,10 +509,6 @@ th, td {
   padding: 10px 0 0 0;
   color: $orange;
 }
-.mypage-text {
-  font-size: 0.75rem;
-}
-
 .mypage-list {
   @include content-box;
   margin-top: 80px;
@@ -571,7 +577,7 @@ th, td {
   width: 200px;
 }
 .select-number {
-  width: 70px;
+  width: 80px;
 }
 .attention {
   color: $red;
@@ -695,9 +701,6 @@ th, td {
 }
 
 /* Carousel(あとで個別ファイルにする) */
-// element.style {
-//   transform: translateX(125px) scale(1);
-// }
 .el-carousel {
   margin: -20px;
 }
@@ -817,4 +820,12 @@ input[name="tab-item"] {
     @include button-centering;
     margin-top: 30px;
   }
+}
+
+/* Collapse */
+.el-collapse, .el-collapse-item__header, .el-collapse-item__wrap {
+  border-style: none;
+}
+.el-collapse-item__wrap {
+  background: none;
 }

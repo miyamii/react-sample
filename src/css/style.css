@@ -267,6 +267,13 @@ th, td {
   background-color: #555; }
 
 /* Mypage */
+.mypage-text, .mypage-table span, .login-form .login-panel-text, .cart-table-bottom-text, .cart-button-area .cart-text {
+  font-size: 0.75rem; }
+
+.mypage-text-bold {
+  font-size: 0.8rem;
+  font-weight: bold; }
+
 .mypage-text-link {
   font-weight: bold; }
   .mypage-text-link:hover {
@@ -399,10 +406,10 @@ th, td {
     width: 180px;
     background-color: #efefef; }
 
-.contact-form .normal-button, .contact-form .submit-button {
+.form-input .normal-button, .form-input .submit-button {
   margin-top: 10px; }
 
-.contact-form .submit-button {
+.form-input .submit-button {
   margin-top: 30px; }
 
 .mypage-h2 {
@@ -418,9 +425,6 @@ th, td {
   font-weight: 900;
   padding: 10px 0 0 0;
   color: orange; }
-
-.mypage-text, .login-form .login-panel-text, .cart-table-bottom-text, .cart-button-area .cart-text {
-  font-size: 0.75rem; }
 
 .mypage-list {
   width: 1000px;
@@ -488,7 +492,7 @@ th, td {
   width: 200px; }
 
 .select-number {
-  width: 70px; }
+  width: 80px; }
 
 .attention, .cart-attention {
   color: red;
@@ -708,7 +712,7 @@ input[name="tab-item"] {
   margin: 30px auto 0 auto;
   border: 1px solid #aaa;
   text-align: center; }
-  .error .error-message-panel .mypage-text, .error .error-message-panel .login-form .login-panel-text, .login-form .error .error-message-panel .login-panel-text, .error .error-message-panel .cart-table-bottom-text, .error .error-message-panel .cart-button-area .cart-text, .cart-button-area .error .error-message-panel .cart-text {
+  .error .error-message-panel .mypage-text, .error .error-message-panel .mypage-table span, .mypage-table .error .error-message-panel span, .error .error-message-panel .login-form .login-panel-text, .login-form .error .error-message-panel .login-panel-text, .error .error-message-panel .cart-table-bottom-text, .error .error-message-panel .cart-button-area .cart-text, .cart-button-area .error .error-message-panel .cart-text {
     position: relative;
     top: 50%;
     margin-top: -0.5em; }
@@ -717,3 +721,10 @@ input[name="tab-item"] {
   display: block;
   margin: 0 auto;
   margin-top: 30px; }
+
+/* Collapse */
+.el-collapse, .el-collapse-item__header, .el-collapse-item__wrap {
+  border-style: none; }
+
+.el-collapse-item__wrap {
+  background: none; }
