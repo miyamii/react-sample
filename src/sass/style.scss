@@ -800,9 +800,21 @@ input[name="tab-item"] {
 //     }
 //   }
 
-.error-message-panel {
-  width: 800px;
-  margin: 0 auto;
-  border: 1px solid $gray;
-  text-align: center;
+.error {
+  .error-message-panel {
+    width: 800px;
+    height: 300px;
+    margin: 30px auto 0 auto;
+    border: 1px solid $gray;
+    text-align: center;
+    .mypage-text {
+      position: relative;
+      top: 50%;
+      margin-top: -0.5em;
+    }
+  }
+  .back-button {
+    @include button-centering;
+    margin-top: 30px;
+  }
 }

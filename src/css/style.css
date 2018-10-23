@@ -702,8 +702,18 @@ input[name="tab-item"] {
   padding: 30px;
   text-align: center; }
 
-.error-message-panel {
+.error .error-message-panel {
   width: 800px;
-  margin: 0 auto;
+  height: 300px;
+  margin: 30px auto 0 auto;
   border: 1px solid #aaa;
   text-align: center; }
+  .error .error-message-panel .mypage-text, .error .error-message-panel .login-form .login-panel-text, .login-form .error .error-message-panel .login-panel-text, .error .error-message-panel .cart-table-bottom-text, .error .error-message-panel .cart-button-area .cart-text, .cart-button-area .error .error-message-panel .cart-text {
+    position: relative;
+    top: 50%;
+    margin-top: -0.5em; }
+
+.error .back-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px; }

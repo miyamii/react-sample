@@ -18,8 +18,8 @@ class Error extends React.Component {
       <div className="wrapper">
         <Header />
         <div className="container">
-          <div className="mypage-list">
-            <ErrorPanel errorMesage="メールアドレスもしくはパスワードが正しくありません。" />
+          <div className="error mypage-list">
+            <ErrorPanel errorMessage="メールアドレスもしくはパスワードが正しくありません。" />
             <Button className="back-button" size="small">戻る</Button>
           </div>
         </div>
