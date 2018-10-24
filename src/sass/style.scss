@@ -886,6 +886,34 @@ input[name="tab-item"] {
     }
     .back-button {
       padding: 0 40px;
+      margin-right: 10px;
+    }
+  }
+}
+/* Payment */
+.payment {
+  .payment-table {
+    @include table-base;
+    @include table-color();
+    th {
+      text-align: center;
+      font-weight: normal;
+    }
+    td {
+      &:nth-child(1) {
+        text-align: center;
+      }
+    }
+  }
+  .button-wrapper {
+    width: 232px;
+    margin: 20px auto 0;
+    .back-button, .submit-button {
+      display: inline;
+    }
+    .back-button {
+      padding: 0 40px;
+      margin-right: 10px;
     }
   }
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
 import PageTop from '../../components/mypage/pagetop';
-import SectionTitle from '../../components/mypage/section_title';
+import ProcedureHeader from '../../components/mypage/procedure_header';
 
 class AddressTableRow extends React.Component {
   constructor(props) {
@@ -52,15 +52,14 @@ function AddressForm() {
   );
 }
 
-class Address extends React.Component {
+class ProcedureAddress extends React.Component {
   render() {
     return (
       <div className="wrapper">
         <Header />
         <div className="container">
           <div className="address mypage-list">
-            <img src="https://placehold.jp/700x80.png" alt="お届け先の指定"/>
-            <SectionTitle title="お届け先の指定" />
+          <ProcedureHeader title="お届け先の指定" alt="お届け先の指定"/>
             <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキスト<br />
             <span className="attention">※テキストテキストテキスト</span></p>
             <Button className="add-address-button"size="small">新しいお届け先を追加する</Button>
@@ -73,4 +72,4 @@ class Address extends React.Component {
     );
   }
 }
-export default Address;
+export default ProcedureAddress;

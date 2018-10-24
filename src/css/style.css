@@ -776,4 +776,30 @@ input[name="tab-item"] {
   .address .button-wrapper .back-button, .address .button-wrapper .submit-button {
     display: inline; }
   .address .button-wrapper .back-button {
-    padding: 0 40px; }
+    padding: 0 40px;
+    margin-right: 10px; }
+
+/* Payment */
+.payment .payment-table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  border-color: #ccc; }
+  .payment .payment-table th {
+    background-color: #efefef; }
+  .payment .payment-table th {
+    text-align: center;
+    font-weight: normal; }
+  .payment .payment-table td:nth-child(1) {
+    text-align: center; }
+
+.payment .button-wrapper {
+  width: 268px;
+  margin: 20px auto 0; }
+  .payment .button-wrapper .back-button, .payment .button-wrapper .submit-button {
+    display: inline; }
+  .payment .button-wrapper .back-button {
+    padding: 0 40px;
+    margin-right: 10px; }
