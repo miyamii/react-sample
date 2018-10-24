@@ -18,7 +18,7 @@ function HeaderNav(props) {
     <div className="nav">
       <form action="/" method="post">
         <div className="login-area">
-        {props.isLogin ? <span className="mypage-text">ようこそ&nbsp;<b>〇〇&nbsp;〇〇様</b>&nbsp;&nbsp;<a className="mypage-text-link" href="#">ログアウト</a></span> : <i className="fas fa-lock fa-lg fa-fw" />}
+        {props.isLogin ? <span className="mypage-text">ようこそ&nbsp;<b>〇〇&nbsp;〇〇様</b>&nbsp;&nbsp;<Link to="/mypage/login" className="mypage-text-link">ログアウト</Link></span> : <i className="fas fa-lock fa-lg fa-fw" />}
         </div>
         {/* ログイン時と非ログイン時でボタンの数が変わる */}
         <div className="button-area">

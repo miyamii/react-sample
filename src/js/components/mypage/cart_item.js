@@ -67,7 +67,7 @@ function FormButton() {
       <p className="cart-text">上記内容でよろしければ、 購入手続きへ ボタンを押してください。</p>
       <div className="button-wrapper">
         <Link to="/"><Button className="back-button" size="small">戻る</Button></Link>
-        <Link to="/detail"><Button className="orange-button" size="small">購入手続きへ</Button></Link>
+        <Link to="/procedure/address"><Button className="orange-button" size="small">購入手続きへ</Button></Link>
         <Button className="orange-button" size="small">登録済み情報でくじを引く</Button>
       </div>
     </div>

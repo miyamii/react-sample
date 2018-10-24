@@ -22,6 +22,7 @@ import Notice from './js/templates/notice';
 import Order from './js/templates/order';
 import Faq from './js/templates/faq';
 import Archives from './js/templates/archives';
+import ProcedureAddress from './js/templates/procedure/address';
 import * as serviceWorker from './serviceWorker';
 
 const ScrollToTop = () => {
@@ -53,6 +54,7 @@ ReactDOM.render(
         <Route path='/order' component={Order} />
         <Route path='/faq' component={Faq} />
         <Route path='/archives' component={Archives} />
+        <Route path='/procedure/address' component={ProcedureAddress} />
       </Switch>
     </React.Fragment>
     {/*

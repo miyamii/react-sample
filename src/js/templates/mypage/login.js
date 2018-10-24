@@ -11,13 +11,13 @@ function LoginForm() {
     <div className="login-wrapper">
       <h3 className="mypage-h3">登録がお済みのお客様</h3>
       <p className="mypage-text">メールアドレスとパスワードを入力してログインしてください。</p>
-      <form className="login-form">
+      <Form className="login-form">
         <span className="login-panel-text">>>&nbsp;メールアドレス&nbsp;:</span><Input className="input-long" size="mini" name="mail" /><br />
         <span className="login-panel-text">>>&nbsp;パスワード&nbsp;:</span><Input className="input-long" size="mini" name="password" />
         <div className="button-wrapper">
-          <Link to="/error"><Button className="login-button" size="small">ログイン</Button></Link>
+          <Link to="/error"><Button className="login-button" nativeType="submit" size="small">ログイン</Button></Link>
         </div>
-      </form>
+      </Form>
       <p className="mypage-text">パスワードを忘れた方は<a href="#" className="mypage-text-link">こちら</a>からパスワードの再発行を行なってください。<br />
       メールアドレスを忘れた方は<a href="#" className="mypage-text-link">こちら</a>からお問い合わせください。</p>
     </div>
