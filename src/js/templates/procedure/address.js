@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Radio, Button } from 'element-react';
+import { Link } from 'react-router-dom';
 import Header from '../../components/mypage/header';
 import Footer from '../../components/mypage/footer';
 import PageTop from '../../components/mypage/pagetop';
@@ -9,7 +10,7 @@ class AddressTableRow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 0
+      value: 1
     }
   }
   onChange(value) {
@@ -17,18 +18,18 @@ class AddressTableRow extends React.Component {
   }
   render() {
     return (
-      <tr className="address-manipulation">
-        <td><Radio value={this.props.value} checked={this.state.value === this.props.value} onChange={this.onChange.bind(this)} name="choice" /></td>
-        <td>お届け先住所</td>
-        <td>〒〇〇〇-〇〇〇〇<br />住所が入ります。<br />〇〇&nbsp;〇〇様</td>
-        <td><a className="mypage-text-link" href="javascript:void(0);" onClick="return false;">変更</a></td>
-        <td><a className="mypage-text-link" href="javascript:void(0);" onClick="return false;">削除</a></td>
+      <tr>
+        <td><input id="delivery-address1" type="radio" name="delivery-address1" value={this.props.value} /></td>
+        <td>{this.props.value === 1 ? "登録住所" : "追加お届け先"}</td>
+        <td>住所が入ります。<br />〇〇&nbsp;〇〇</td>
+        <td>{this.props.value === 1 ? "-" : <a className="mypage-text-link" href="javascript:void(0);" onClick="return false;">変更</a>}</td>
+        <td>{this.props.value === 1 ? "-" : <a className="mypage-text-link" href="javascript:void(0);" onClick="return false;">削除</a>}</td>
       </tr>
     );
   }
 }
 
-function AddressTable() {
+function AddressForm() {
   return (
     <form action="#" method="post">
       <table className="address-table" rules="all">
@@ -39,8 +40,14 @@ function AddressTable() {
           <th>変更</th>
           <th>削除</th>
         </tr>
-        <AddressTableRow />
+        <AddressTableRow value={1} />
+        <AddressTableRow value={2} />
+        <AddressTableRow value={3} />
       </table>
+      <div className="button-wrapper">
+        <Link to="/cart"><Button className="back-button" size="small" nativeType="button">戻る</Button></Link>
+        <Link to="/procedure/payment"><Button className="submit-button" size="small" nativeType="submit">選択したお届け先に送る</Button></Link>
+      </div>
     </form>
   );
 }
@@ -51,12 +58,13 @@ class Address extends React.Component {
       <div className="wrapper">
         <Header />
         <div className="container">
-          <div className="mypage-list">
+          <div className="address mypage-list">
             <img src="https://placehold.jp/700x80.png" alt="お届け先の指定"/>
             <SectionTitle title="お届け先の指定" />
-            <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキスト
+            <p className="mypage-text">テキストテキストテキストテキストテキストテキストテキスト<br />テキストテキストテキストテキストテキストテキストテキスト<br />
             <span className="attention">※テキストテキストテキスト</span></p>
-            <Button className="normal-button"size="small">新しいお届け先を追加する</Button>
+            <Button className="add-address-button"size="small">新しいお届け先を追加する</Button>
+            <AddressForm />
           </div>
         </div>
         <PageTop />

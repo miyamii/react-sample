@@ -789,10 +789,8 @@ input[name="tab-item"] {
     text-align: left;
     font-weight: normal;
   }
-  td {
-    .mypage-text-link {
-      text-align: center;
-    }
+  td:nth-child(1), td:nth-child(4), td:nth-child(5) {
+    text-align: center;
   }
 }
 
@@ -851,4 +849,43 @@ input[name="tab-item"] {
 }
 .el-collapse-item__wrap {
   background: none;
+}
+
+/* Address */
+.address {
+  .add-address-button {
+    @extend .normal-button;
+    margin: 20px 0;
+  }
+  .address-table {
+    @include table-base;
+    @include table-color();
+    th {
+      text-align: center;
+      font-weight: normal;
+    }
+    td {
+      text-align: center;
+      &:nth-child(1), &:nth-child(4), &:nth-child(5) {
+        width: 100px;
+      }
+      &:nth-child(2) {
+        width: 200px;
+      }
+      &:nth-child(3) {
+        text-align: left;
+        width: 500px;
+      }
+    }
+  }
+  .button-wrapper {
+    width: 268px;
+    margin: 20px auto 0;
+    .back-button, .submit-button {
+      display: inline;
+    }
+    .back-button {
+      padding: 0 40px;
+    }
+  }
 }

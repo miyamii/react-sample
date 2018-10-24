@@ -279,7 +279,7 @@ th, td {
   .mypage-text-link:hover {
     text-decoration: underline; }
 
-.normal-button {
+.normal-button, .address .add-address-button {
   height: 28px;
   font-weight: bold;
   border: 1px solid #aaa;
@@ -287,9 +287,9 @@ th, td {
   background-color: #efefef;
   border-color: #aaa;
   color: #333; }
-  .normal-button:hover {
+  .normal-button:hover, .address .add-address-button:hover {
     opacity: 0.8; }
-  .normal-button:hover {
+  .normal-button:hover, .address .add-address-button:hover {
     opacity: 0.8;
     border-color: #aaa;
     color: #333; }
@@ -406,7 +406,7 @@ th, td {
     width: 180px;
     background-color: #efefef; }
 
-.form-input .normal-button, .form-input .submit-button {
+.form-input .normal-button, .form-input .address .add-address-button, .address .form-input .add-address-button, .form-input .submit-button {
   margin-top: 10px; }
 
 .form-input .submit-button {
@@ -713,7 +713,7 @@ input[name="tab-item"] {
   .delivery-table th {
     text-align: left;
     font-weight: normal; }
-  .delivery-table td .mypage-text-link {
+  .delivery-table td:nth-child(1), .delivery-table td:nth-child(4), .delivery-table td:nth-child(5) {
     text-align: center; }
 
 .refusal-panel {
@@ -743,3 +743,37 @@ input[name="tab-item"] {
 
 .el-collapse-item__wrap {
   background: none; }
+
+/* Address */
+.address .add-address-button {
+  margin: 20px 0; }
+
+.address .address-table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  border-color: #ccc; }
+  .address .address-table th {
+    background-color: #efefef; }
+  .address .address-table th {
+    text-align: center;
+    font-weight: normal; }
+  .address .address-table td {
+    text-align: center; }
+    .address .address-table td:nth-child(1), .address .address-table td:nth-child(4), .address .address-table td:nth-child(5) {
+      width: 100px; }
+    .address .address-table td:nth-child(2) {
+      width: 200px; }
+    .address .address-table td:nth-child(3) {
+      text-align: left;
+      width: 500px; }
+
+.address .button-wrapper {
+  width: 268px;
+  margin: 20px auto 0; }
+  .address .button-wrapper .back-button, .address .button-wrapper .submit-button {
+    display: inline; }
+  .address .button-wrapper .back-button {
+    padding: 0 40px; }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { Form, Select, Button } from 'element-react';
 import Title from './section_title';
 // import CartTable from './section_title';
