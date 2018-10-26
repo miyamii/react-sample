@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'element-react';
-// import logo from '../img/logo.png';
 
 function Logo(){
   const logoUrl = new URL('https://placehold.jp/150x70.png?text=logo');
