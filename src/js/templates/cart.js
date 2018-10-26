@@ -9,7 +9,7 @@ class Cart extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <Header isLogin={true} />
         <div className="container">
           <ul className="mypage-list">
             <CartItem title="現在のカートの中" isAfter={false} buyNum={1}/>

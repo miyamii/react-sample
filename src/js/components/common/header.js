@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-// import logo from '../img/logo.png';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCartPlus, faUser } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faCartPlus, faUser);
 
 function Logo(){
   const logoUrl = new URL('https://placehold.jp/130x50.png?text=logo');
@@ -15,8 +20,8 @@ function Logo(){
 function HeaderNav() {
   return (
     <div className="nav">
-      <div className="icon"><Link to="/cart"><i className="fas fa-cart-plus fa-2x fa-fw"></i></Link></div>
-      <div className="icon"><Link to="/mypage"><i className="fas fa-user fa-2x fa-fw"></i></Link></div>
+      <div className="icon"><Link to="/cart"><FontAwesomeIcon icon="cart-plus" size="2x"/></Link></div>
+      <div className="icon"><Link to="/mypage"><FontAwesomeIcon icon="user" size="2x"/></Link></div>
   </div>
   );
 }

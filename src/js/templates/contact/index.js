@@ -100,7 +100,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <Header isLogin={true} />
         <div className="container">
           <div className="mypage-list">
             <SectionTitle title="お問い合わせ" />

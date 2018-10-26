@@ -59,7 +59,7 @@ class ContactConfirm extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <Header isLogin={true} />
         <div className="container">
           <ul className="mypage-list">
             <li className="mypage-list-item">

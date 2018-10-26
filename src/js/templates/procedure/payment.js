@@ -52,7 +52,7 @@ class ProcedurePayment extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <Header isLogin={true} />
         <div className="container">
           <div className="payment mypage-list">
             <ProcedureHeader title="お支払い方法の指定" alt="お支払い方法の指定" />

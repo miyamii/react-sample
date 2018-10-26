@@ -17,7 +17,7 @@ class Error extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <Header isLogin={true} />
         <div className="container">
           <div className="error mypage-list">
             <ErrorPanel errorMessage="メールアドレスもしくはパスワードが正しくありません。" />
