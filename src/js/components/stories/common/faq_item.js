@@ -1,21 +1,22 @@
 import React from 'react';
 import { storiesOf, action } from '@storybook/react';
-import CommonFaqItem from '../../common/faq_item';
+import { MemoryRouter } from 'react-router'
+import FaqItem from '../../common/faq_item';
 
-storiesOf('CommonFaqItem', module)
-  .add('all active', () => {
-    const todoItems = [
-      { id: 'one', text: 'Item One', completed: false },
-      { id: 'two', text: 'Item Two', completed: false },
-    ];
-
-    return getMainSection(todoItems);
+storiesOf('FaqItem', module)
+.addDecorator(story => (
+  <MemoryRouter initialEntries={['/', 'posts']}>{story()}</MemoryRouter>
+))
+  .add('Regular', () => {
+    const question = "これは質問文ですか？";
+    const answer = "これは回答文です";
+    return getFaqItem(question, answer);
   })
-  .add('some completed', () => {
-    const todoItems = [
-      { id: 'one', text: 'Item One', completed: false },
-      { id: 'two', text: 'Item Two', completed: true },
-    ];
 
-    return getMainSection(todoItems);
-  })
+  function getFaqItem(question, answer) {
+    return (
+      <ul>
+        <FaqItem question={question} answer={answer} />
+      </ul>
+    );
+  }

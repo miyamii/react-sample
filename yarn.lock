@@ -948,6 +948,87 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.1.3.tgz#b700d97385fa91affed60c71dfd51c67e9dad762"
   integrity sha512-QsYGKdhhuDFNq7bjm2r44y0mp5xW3uO3csuTPDWZc0OIiMQv+AIY5Cqwd4mJiC5N8estVl7qlvOx1hbtOuUWbw==
 
+"@fortawesome/fontawesome-common-types@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.7.tgz#fe76803922db0eb4393675199c2e0c3bad52629c"
+  integrity sha512-lFgL3Kqfwk8WS66pkBx5rpd7IQuo8UuahZXH9iuV9UrPK8eDzLccCYopnhTUgsz7+aJpMpqjVyv/N/11j5TtVw==
+
+"@fortawesome/fontawesome-svg-core@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.7.tgz#064aefa1c8e4b055fbc6de0b6fbd3ff5ecf564ea"
+  integrity sha512-lkysL+BqfeggO+rAew3WFHJNImB47NBQrEfD32gXaS3MYkEdo1YkGkQ6/4hfY4Dt7rJfSseeUIYqMB8eEHD9JQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.7"
+
+"@fortawesome/free-brands-svg-icons@^5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.4.2.tgz#3abed8383d8d24010b22b592751c30b9150d8813"
+  integrity sha512-Pb1D/VWa/L0W+/LfZqQJ3I3tf96Q/nDwinkMfL+pJF+gBTSc7UZR0U2fkmDRWjSDzrPggkMPkVUZMkimOnPQ3w==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.7"
+
+"@fortawesome/free-regular-svg-icons@^5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.4.2.tgz#88a0d8e5a270aee37eb9f54707ca6d769a0c7a75"
+  integrity sha512-rjYHr3yTMp6Ow4xNdNkGt92siQ3ytSQcE5wYtVC745iWeqYbPNo7vkSEyrH771Z/g8clux5z+Wf9UxXBQSzhqQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.7"
+
+"@fortawesome/free-solid-svg-icons@^5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.4.2.tgz#185fdab8806d5726846719dd7f8a2756c7b4f7fe"
+  integrity sha512-emie9CsLZPLVPH1adR3MNGNlm0GSVvEuUbZkQr0uXSp+Q9SZL0/OF6ava3DCKkwDbjn3jDKPchOraj0Vkuat6Q==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.7"
+
+"@fortawesome/react-fontawesome@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.3.tgz#266b4047892c3d10498af1075d89252f74015b11"
+  integrity sha512-tc689l67rPZ7+ynZVUgOXY80rAt5KxvuH1qjPpJcbyJzJHzk5yhrD993BjsSEdPBLTtPqmvwynsO/XrAQqHbtg==
+  dependencies:
+    humps "^2.0.1"
+    prop-types "^15.5.10"
+
+"@storybook/addon-actions@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.0.0.tgz#7dfd5f2c2d180d38faa29d111ed3ed31ce1e84e0"
+  integrity sha512-yg+oCofxOxoYq4K7V7r0fwpuIUnmGvCkwrT8Rx/TOtAVk47PqSToLWCJDmy58b+yWa9nl+EukclVpr/H9AmZVA==
+  dependencies:
+    "@emotion/core" "^0.13.1"
+    "@emotion/provider" "^0.11.2"
+    "@emotion/styled" "^0.10.6"
+    "@storybook/addons" "4.0.0"
+    "@storybook/components" "4.0.0"
+    "@storybook/core-events" "4.0.0"
+    deep-equal "^1.0.1"
+    global "^4.3.2"
+    lodash "^4.17.11"
+    make-error "^1.3.5"
+    prop-types "^15.6.2"
+    react-inspector "^2.3.0"
+    uuid "^3.3.2"
+
+"@storybook/addon-links@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.0.0.tgz#8b25148b2a3e30f0188070809c052a33abfb1617"
+  integrity sha512-a+durpAdlfWrQ1FYgJeWatMWohNk0PsxKBJBQ1OjgOaL3Al0J6GEcap2hr6fTzPBqnuhFwHD4pGGCEsWaqFwGA==
+  dependencies:
+    "@storybook/addons" "4.0.0"
+    "@storybook/components" "4.0.0"
+    "@storybook/core-events" "4.0.0"
+    global "^4.3.2"
+    prop-types "^15.6.2"
+
+"@storybook/addons@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.0.tgz#b71b545a735b902fa62934ac98fd262b65c924f7"
+  integrity sha512-hIYM9I/7ZV5bojQiuOwQTPWQT/wBYB8iCY9yi3BiL1/ob/YOf8xeSmi4NGecCyPd2j0CKIB+vxvEv/6X3tgclQ==
+  dependencies:
+    "@storybook/channels" "4.0.0"
+    "@storybook/components" "4.0.0"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/addons@4.0.0-rc.6":
   version "4.0.0-rc.6"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.0-rc.6.tgz#3c84d03b57c0ced483f36da41c0256411ab335da"
@@ -967,6 +1048,11 @@
     global "^4.3.2"
     json-stringify-safe "^5.0.1"
 
+"@storybook/channels@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.0.tgz#b712d711f67966028dbff5c57e6ddc6f53d5cbac"
+  integrity sha512-VJdct5WajZweZgl532ufGZKefk0kI8QI+SCWW93YEPrvgo+vGPBOlsZpWNZw0ozhESgnJwvSjNWYZYsSt/j1dQ==
+
 "@storybook/channels@4.0.0-rc.6":
   version "4.0.0-rc.6"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.0-rc.6.tgz#b13b859175f5033a0f7c71d61178b6a4ad5c54ae"
@@ -976,6 +1062,22 @@
   version "4.0.0-rc.6"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.0.0-rc.6.tgz#b8698a84c5b6bd47b4417a573d3c3eb52399c16e"
   integrity sha512-UCbRYfpuROGfEQvtgVM1aUTBWScu1XPuTJebfvNar+kx6/li7VVA4I1Xpl2WeB+e6uDNcq5hUeIPkaVZUfKTIw==
+
+"@storybook/components@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.0.tgz#5006f5b423eb1ae8b97fc82710b532c0e1b45805"
+  integrity sha512-H/jXW96OTUdDuJBltt5Cx+svLFH7BnAvU+XAb+/O/55ikxLoYJjtq+HnyZx3oY/y6br6mBESdOiovZisAnffhQ==
+  dependencies:
+    "@emotion/core" "^0.13.1"
+    "@emotion/provider" "^0.11.2"
+    "@emotion/styled" "^0.10.6"
+    global "^4.3.2"
+    lodash "^4.17.11"
+    prop-types "^15.6.2"
+    react-inspector "^2.3.0"
+    react-split-pane "^0.1.84"
+    react-textarea-autosize "^7.0.4"
+    render-fragment "^0.1.1"
 
 "@storybook/components@4.0.0-rc.6":
   version "4.0.0-rc.6"
@@ -992,6 +1094,11 @@
     react-split-pane "^0.1.84"
     react-textarea-autosize "^7.0.4"
     render-fragment "^0.1.1"
+
+"@storybook/core-events@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.0.tgz#9fc5e094044f161e4484139833c4cc2e743ec34c"
+  integrity sha512-RShVYSb8oB5ZGjxqZGAQuiHCYn+LCI9yFE2VLAc8a0UM4C+kQWxtFxIxjYgmF/ewTctz+Vl8miBAH3MhEDNXyA==
 
 "@storybook/core-events@4.0.0-rc.6":
   version "4.0.0-rc.6"
@@ -6122,6 +6229,11 @@ https-browserify@^1.0.0:
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
+humps@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
+  integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
+
 hyphenate-style-name@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
@@ -7614,6 +7726,11 @@ make-dir@^1.0.0:
   integrity sha512-2w31R7SJtieJJnQtGc7RVL2StM2vGYVfqUOvUDxH6bC6aJTxPxTF0GnIgCyu7tjockiUWAYQRbxa7vKn34s5sQ==
   dependencies:
     pify "^3.0.0"
+
+make-error@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.5.tgz#efe4e81f6db28cadd605c70f29c831b58ef776c8"
+  integrity sha512-c3sIjNUow0+8swNwVpqoH4YCShKNFkMaw6oH1mNS2haDZQqkeZFlHS3dhoeEbKKmJB4vXpJucU6oH75aDYeE9g==
 
 makeerror@1.0.x:
   version "1.0.11"
@@ -11961,7 +12078,7 @@ webpack@4.19.1:
     watchpack "^1.5.0"
     webpack-sources "^1.2.0"
 
-webpack@^4.21.0, webpack@^4.22.0:
+webpack@^4.21.0:
   version "4.23.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.23.1.tgz#db7467b116771ae020c58bdfe2a0822785bb8239"
   integrity sha512-iE5Cu4rGEDk7ONRjisTOjVHv3dDtcFfwitSxT7evtYj/rANJpt1OuC/Kozh1pBa99AUBr1L/LsaNB+D9Xz3CEg==

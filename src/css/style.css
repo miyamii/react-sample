@@ -240,7 +240,7 @@ th, td {
       font-weight: bold; }
       .info .info-guide li h3 {
         margin: 0; }
-      .info .info-guide li i {
+      .info .info-guide li svg {
         color: orange; }
     .info .info-guide .info-text {
       font-size: 14px;
@@ -796,7 +796,7 @@ input[name="tab-item"] {
     text-align: center; }
 
 .payment .button-wrapper {
-  width: 268px;
+  width: 232px;
   margin: 20px auto 0; }
   .payment .button-wrapper .back-button, .payment .button-wrapper .submit-button {
     display: inline; }

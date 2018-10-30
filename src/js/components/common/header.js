@@ -20,8 +20,8 @@ function Logo(){
 function HeaderNav() {
   return (
     <div className="nav">
-      <div className="icon"><Link to="/cart"><FontAwesomeIcon icon="cart-plus" size="2x"/></Link></div>
-      <div className="icon"><Link to="/mypage"><FontAwesomeIcon icon="user" size="2x"/></Link></div>
+      <div className="icon"><Link to="/cart"><FontAwesomeIcon icon="cart-plus" size="2x" fixedWidth /></Link></div>
+      <div className="icon"><Link to="/mypage"><FontAwesomeIcon icon="user" size="2x" fixedWidth /></Link></div>
   </div>
   );
 }

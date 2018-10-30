@@ -23,13 +23,13 @@ function HeaderNav(props) {
     <div className="nav">
       <form action="/" method="post">
         <div className="login-area">
-        {props.isLogin ? <span className="mypage-text">ようこそ&nbsp;<b>〇〇&nbsp;〇〇様</b>&nbsp;&nbsp;<Link to="/mypage/login" className="mypage-text-link">ログアウト</Link></span> : <FontAwesomeIcon icon="lock" size="lg"/>}
+        {props.isLogin ? <span className="mypage-text">ようこそ&nbsp;<b>〇〇&nbsp;〇〇様</b>&nbsp;&nbsp;<Link to="/mypage/login" className="mypage-text-link">ログアウト</Link></span> : <FontAwesomeIcon icon="lock" size="lg" fixedWidth />}
         </div>
         {/* ログイン時と非ログイン時でボタンの数が変わる */}
         <div className="button-area">
-          <Link to="/mypage"><Button size="small" className="mypage-button"><FontAwesomeIcon icon="user" size="lg"/>マイページ</Button></Link>
-          {props.isLogin ? '' : (<Link to="/entry"><Button size="small" className="orange-button"><FontAwesomeIcon icon="edit" size="lg"/>会員登録</Button></Link>)}
-          <Link to="/cart"><Button size="small" className="orange-button"><FontAwesomeIcon icon="cart-plus" size="lg"/>カートの中を見る</Button></Link>
+          <Link to="/mypage"><Button size="small" className="mypage-button"><FontAwesomeIcon icon="user" size="lg" fixedWidth/>マイページ</Button></Link>
+          {props.isLogin ? '' : (<Link to="/entry"><Button size="small" className="orange-button"><FontAwesomeIcon icon="edit" size="lg" fixedWidth/>会員登録</Button></Link>)}
+          <Link to="/cart"><Button size="small" className="orange-button"><FontAwesomeIcon icon="cart-plus" size="lg" fixedWidth/>カートの中を見る</Button></Link>
         </div>
       </form>
     </div>

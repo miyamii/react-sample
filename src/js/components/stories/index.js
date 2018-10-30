@@ -1,4 +1,21 @@
 import './common/header';
 import './common/footer';
+import './common/faq_item';
+import './common/info';
+import './common/news_item';
+import './common/pagetop';
+import './common/product_item';
+import './common/section_title';
+import './common/section';
+import './common/title';
+import './common/color_label';
+
 import './mypage/header';
 import './mypage/footer';
+import './mypage/cart_item';
+import './mypage/cart_table';
+import './mypage/pagetop';
+import './mypage/procedure_header';
+import './mypage/section_title';
+import './mypage/user_table';
+import './mypage/button';
